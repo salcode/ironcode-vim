@@ -145,9 +145,8 @@ syntax on
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Setting solarized dark
-set background=dark
-colorscheme solarized
+" Setting colorscheme light
+set background=light
 
 " setting my default font sizes
 set guifont=Monaco:h13
