@@ -239,6 +239,28 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Buffer Management
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" display buffers in airline status bar
+	" Enable the list of buffers
+	let g:airline#extensions#tabline#enabled = 1
+
+	" Show just the filename
+	let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Ctrl + Tab for next buffer
+nnoremap <C-Tab> :bnext<CR>
+" Ctrl + Shift + Tab for previous buffer
+nnoremap <C-S-Tab> :bprevious<CR>
+
+" <leader>bd to delete the current buffer but keep the window split open
+nnoremap <leader>bd :bprev\|bdelete #<CR>
+
+" <F5> to open a buffer menu, type buffer number and hit enter to switch
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings and Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
