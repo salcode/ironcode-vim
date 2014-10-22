@@ -227,11 +227,16 @@ set wildignore+=*.pot,*.po,*.mo
 set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => View Ports
+" => View Ports (a.k.a. Windows)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Adjust viewports to the same size
 noremap <leader>= <C-w>=
+
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings and Shortcuts
