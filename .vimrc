@@ -97,6 +97,8 @@ set incsearch
 
 " mapping search with Ack
 nnoremap <leader>f :Ack<space>
+" use ag (the silver searcher) in place of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " CTRL P
 nnoremap <leader>p :CtrlPTag<cr>
