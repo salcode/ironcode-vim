@@ -166,10 +166,40 @@ let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 
 " https://github.com/shawncplus/phpcomplete.vim/issues/48
 " let g:phpcomplete_enhance_jump_to_definition = 0
 
-
-
-
 " }}}
+
+" Files and backups {{{
+" -------------------------------------------------------------
+" do not create a backup file before overwrite
+set nobackup
+
+" write a temporary backup file that is removed once
+" the original is successfully overwritten
+set writebackup
+
+" do all work in memory, no swap file
+set noswapfile
+
+" if a file is changed outside Vim, automatically re-read it
+set autoread
+" }}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 " project level .vimrc files
 set exrc
 
@@ -181,15 +211,8 @@ set clipboard=unnamed
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set nowb
-set noswapfile
 
-" autoloading changed files
-set autoread
-
-" nerdcommenter
+" load plugin files for specific file types (needed for plugin NerdCommenter)
 filetype plugin on
 
 " PDV - PHP documenter script
