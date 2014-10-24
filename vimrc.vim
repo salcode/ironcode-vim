@@ -306,28 +306,8 @@ augroup END
 
 " }}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Be smart when using tabs ;)
-
-
-set backspace=indent,eol,start                          " backspace through everything in insert mode
+" allow backspacing over autoindent, line breaks, and start of insert
+set backspace=indent,eol,start
 
 
 augroup remove_trailing_whitespace
