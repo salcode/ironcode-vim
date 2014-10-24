@@ -71,6 +71,27 @@ set statusline+=\ %P                    " percent through file
 
 " }}}
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Appearance {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" show invisibles
+set list
+
+" set display characters for invisibles
+set listchars=eol:¬,tab:▸\ ,trail:~,extends:>,precedes:< " decides what whitespace to shaw
+
+" by default do not wrap lines
+set nowrap
+
+" when wrap is set to on, break at logicial points (set in breadat)
+set linebreak
+
+" line numbers
+set number
+
+" }}}
+
 " mapping my leader to comma
 let mapleader = ","
 let g:mapleader = ","
@@ -167,7 +188,6 @@ set guifont=Monaco:h13
 " Be smart when using tabs ;)
 set smarttab
 
-set wrap linebreak nolist
 
 " map j to gj and k to gk, so line navigation ignores line wrap
 nnoremap j gj
@@ -176,14 +196,8 @@ nnoremap k gk
 " 1 tab == 4 spaces
 set tabstop=4                                           " a tab is four spaces
 set shiftwidth=4                                        " an autoindent (with <<) is four spaces
-set list                                                " show invisibles
-set listchars=eol:¬,tab:▸\ ,trail:~,extends:>,precedes:< " decides what whitespace to shaw
-set nowrap                                              " don't wrap lines
 set backspace=indent,eol,start                          " backspace through everything in insert mode
 
-" line numbers
-set number
-set ruler
 
 augroup remove_trailing_whitespace
 	autocmd!
