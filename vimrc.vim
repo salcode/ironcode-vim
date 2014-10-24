@@ -143,6 +143,22 @@ nnoremap <leader>sg :source $MYGVIMRC<cr>
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
+	" ### Shortcuts to Modify Tabs/Spaces {{{
+
+	" Map <leader>ts2 to expand (t)abs to (s)paces with (2) characters indicating a tab
+	nnoremap <leader>ts2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
+
+	" Map <leader>ts4 to expand (t)abs to (s)paces with (4) characters indicating a tab
+	nnoremap <leader>ts4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
+
+	" Map <leader>tt2 to (t)abs to be treated as (t)ab characters and display as (2) characters
+	nnoremap <leader>tt2 :set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab<CR>
+
+	" Map <leader>tt4 to (t)abs to be treated as (t)ab characters and display as (4) characters
+	nnoremap <leader>tt4 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
+
+	" }}}
+
 	" ### Window / View Port Mapping {{{
 
 	" <leader>= adjusts viewports to be all the same size
@@ -349,17 +365,6 @@ set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.
 " print_r( with parameter true and a label
 autocmd FileType php nnoremap <leader>el ^vg_daerror_log( '<esc>pa=' . print_r( <esc>pa, true ) );<cr><esc>
 
-" Map <leader>ts2 to expand (t)abs to (s)paces with (2) characters indicating a tab
-nnoremap <leader>ts2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
-
-" Map <leader>ts4 to expand (t)abs to (s)paces with (4) characters indicating a tab
-nnoremap <leader>ts4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
-
-" Map <leader>tt2 to (t)abs to be treated as (t)ab characters and display as (2) characters
-nnoremap <leader>tt2 :set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab<CR>
-
-" Map <leader>tt4 to (t)abs to be treated as (t)ab characters and display as (4) characters
-nnoremap <leader>tt4 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Dealing with folding
