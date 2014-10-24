@@ -95,6 +95,13 @@ set linebreak
 " line numbers
 set number
 
+" Syntax Highlighing
+syntax enable
+syntax on
+
+" Setting colorscheme light
+set background=light
+
 " }}}
 
 " Tab and Indentation Settings {{{
@@ -223,18 +230,9 @@ noremap <leader>d :call pdv#DocumentCurrentLine()<CR>
 " Colours and Fonts
 """""""""""""""""""""""""""
 
-" Syntax Highlighing
-syntax enable
-syntax on
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
-" Setting colorscheme light
-set background=light
-
-" setting my default font sizes
-set guifont=Monaco:h13
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
