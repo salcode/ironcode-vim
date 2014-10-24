@@ -117,9 +117,30 @@ set autoindent
 
 " }}}
 
-" mapping my leader to comma
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mapping {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" map leader to comma
 let mapleader = ","
 let g:mapleader = ","
+
+	" ### Window / View Port Mapping {{{
+
+	 <leader>= adjusts viewports to be all the same size
+	noremap <leader>= <C-w>=
+
+	" shortcuts for window navigation
+	" Ctrl+h (left), Ctrl+j (down), etc.
+	nnoremap <C-H> <C-W>h
+	nnoremap <C-J> <C-W>j
+	nnoremap <C-K> <C-W>k
+	nnoremap <C-L> <C-W>l
+
+	" }}}
+
+
+" }}}
 
 " project level .vimrc files
 set exrc
@@ -261,17 +282,6 @@ set wildignore+=*.pot,*.po,*.mo
 " Fonts and such
 set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => View Ports (a.k.a. Windows)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Adjust viewports to the same size
-noremap <leader>= <C-w>=
-
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffer Management
