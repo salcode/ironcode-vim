@@ -121,7 +121,6 @@ set autoindent
 
 " }}}
 
-
 " Mapping {{{
 " -------------------------------------------------------------
 " map leader to comma
@@ -224,6 +223,40 @@ augroup END
 
 " }}}
 
+" File Settings {{{
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+	" file patterns to ignore {{{
+	" Ignore output and VCS files
+	set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+
+	" Ignore image files
+	set wildignore+=*.psd,*.png,*.jpg,*.gif,*.jpeg
+
+	" Ignore archive files
+	set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+
+	" Ignore bundler and sass cache
+	set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+
+	" Ignore temp and backup files
+	set wildignore+=*.swp,*~,._*
+
+	" Ignore Node and JS files
+	set wildignore+=*/node_modules/*,*.min.js
+
+	" Ignore WP Language files
+	set wildignore+=*.pot,*.po,*.mo
+
+	" Ignore Fonts
+	set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
+
+	" }}}
+
+" }}}
+
 " Search {{{
 " -------------------------------------------------------------
 " ignore case when searching
@@ -284,23 +317,8 @@ set exrc
 """""""""""""""""""""""""""
 set clipboard=unnamed
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " load plugin files for specific file types (needed for plugin NerdCommenter)
 filetype plugin on
-
-" PDV - PHP documenter script
-let g:pdv_template_dir = $HOME."/.vim/bundle/pdv/templates_snip"
-noremap <leader>d :call pdv#DocumentCurrentLine()<CR>
-
-"""""""""""""""""""""""""""
-" Colours and Fonts
-"""""""""""""""""""""""""""
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -337,29 +355,6 @@ set iskeyword+=$
 " => Wild settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable output and VCS files
-set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
-
-" Disable image files
-set wildignore+=*.psd,*.png,*.jpg,*.gif,*.jpeg
-
-" Disable archive files
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
-
-" Ignore bundler and sass cache
-set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-
-" Disable temp and backup files
-set wildignore+=*.swp,*~,._*
-
-" Node and JS stuff
-set wildignore+=*/node_modules/*,*.min.js
-
-" WP Language files
-set wildignore+=*.pot,*.po,*.mo
-
-" Fonts and such
-set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
 
 
 
