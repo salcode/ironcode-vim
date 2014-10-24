@@ -112,6 +112,9 @@ set tabstop=4
 " auto indent (<< or >>) is 4 spaces
 set shiftwidth=4
 
+" copy indent from current line when starting a new line
+set autoindent
+
 " }}}
 
 " mapping my leader to comma
@@ -168,10 +171,6 @@ let g:phpcomplete_enhance_jump_to_definition = 0
 set nobackup
 set nowb
 set noswapfile
-
-" indenting
-set autoindent
-set smarttab
 
 " autoloading changed files
 set autoread
