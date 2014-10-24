@@ -307,7 +307,7 @@ com! -bang -range -nargs=* A <line1>,<line2>call easy_align#align('<bang>' == '!
 " Plugin EasyAlign, <Enter> in Visual Mode triggers interactive align
 " e.g. 4V<Enter>
 " selection 4 lines and enters interactive align mode
-vnoremap <Enter> <Plug>(EasyAlign)
+vmap <Enter> <Plug>(EasyAlign)
 
 " Plugin Ack <leader>f search
 nnoremap <leader>f :Ack<space>
