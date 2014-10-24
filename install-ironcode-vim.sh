@@ -2,6 +2,9 @@
 
 # A Quick and Dirty Install file for Ironcode Vim configuration
 
+# clone the project repo
+git clone https://github.com/salcode/ironcode-vim.git ~/ironcode-vim
+
 # make backups of current config
 mv ~/.gvimrc ~/.gvimrc.bkup
 mv ~/.vimrc ~/.vimrc.bkup
