@@ -54,6 +54,23 @@ filetype on
 
 " }}}
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status Line {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2                        " Enable statusline
+set t_Co=256
+let g:airline_theme='solarized'
+
+set statusline=
+set statusline+=%{fugitive#statusline()} " Add git status from vim-fugitive plugin
+set statusline+=%tyru                    " tail of the filename
+set statusline+=%=                      " left/right separator
+set statusline+=%c,                     " cursor column
+set statusline+=%l/%L                   " cursor line/total lines
+set statusline+=\ %P                    " percent through file
+
+" }}}
+
 " mapping my leader to comma
 let mapleader = ","
 let g:mapleader = ","
@@ -69,17 +86,6 @@ set clipboard=unnamed
 """""""""""""""""""""""""""
 " => Airline stuff basically stolen at this point from Travis Northcutt
 """""""""""""""""""""""""""
-set laststatus=2                        " Enable statusline
-set t_Co=256
-let g:airline_theme='solarized'
-
-set statusline=
-set statusline+=%{fugitive#statusline()} " Add git status from vim-fugitive plugin
-set statusline+=%tyru                    " tail of the filename
-set statusline+=%=                      " left/right separator
-set statusline+=%c,                     " cursor column
-set statusline+=%l/%L                   " cursor line/total lines
-set statusline+=\ %P                    " percent through file
 
 let g:wordpress_vim_ctags_path='/usr/local/bin/ctags'
 
