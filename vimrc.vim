@@ -128,6 +128,11 @@ set autoindent
 let mapleader = ","
 let g:mapleader = ","
 
+" map j to gj and k to gk, so line navigation ignores line wrap
+" http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+
 	" ### Window / View Port Mapping {{{
 
 	" <leader>= adjusts viewports to be all the same size
@@ -142,6 +147,20 @@ let g:mapleader = ","
 
 	" }}}
 
+	" ### Buffer Management {{{
+
+	" Ctrl + Tab for next buffer
+	nnoremap <C-Tab> :bnext<CR>
+
+	" Ctrl + Shift + Tab for previous buffer
+	nnoremap <C-S-Tab> :bprevious<CR>
+
+	" <leader>bd to delete the current buffer but keep the window split open
+	nnoremap <leader>bd :bprev\|bdelete #<CR>
+
+	" <F5> to open a buffer menu, type buffer number and hit enter to switch
+	nnoremap <F5> :buffers<CR>:buffer<Space>
+	" }}}
 
 " }}}
 
@@ -240,10 +259,6 @@ set encoding=utf8
 " Be smart when using tabs ;)
 
 
-" map j to gj and k to gk, so line navigation ignores line wrap
-nnoremap j gj
-nnoremap k gk
-
 set backspace=indent,eol,start                          " backspace through everything in insert mode
 
 
@@ -297,21 +312,7 @@ set wildignore+=*.pot,*.po,*.mo
 set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Buffer Management
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-" Ctrl + Tab for next buffer
-nnoremap <C-Tab> :bnext<CR>
-" Ctrl + Shift + Tab for previous buffer
-nnoremap <C-S-Tab> :bprevious<CR>
-
-" <leader>bd to delete the current buffer but keep the window split open
-nnoremap <leader>bd :bprev\|bdelete #<CR>
-
-" <F5> to open a buffer menu, type buffer number and hit enter to switch
-nnoremap <F5> :buffers<CR>:buffer<Space>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings and Shortcuts
