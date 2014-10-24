@@ -162,10 +162,6 @@ set nobackup
 set nowb
 set noswapfile
 
-" NERDTree
-nnoremap <leader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
-let NERDTreeIgnore=['debug[[dir]]', 'hyperdb[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
-
 " indenting
 set autoindent
 set smarttab
