@@ -198,6 +198,12 @@ com! -bang -range -nargs=* A <line1>,<line2>call easy_align#align('<bang>' == '!
 " selection 4 lines and enters interactive align mode
 vmap <Enter> <Plug>(EasyAlign)
 
+" PHP Filetype <leader>el - to wrap variable under cursor in an error log statement
+augroup php_error_log
+	autocmd!
+	autocmd FileType php nnoremap <leader>el ^vg_daerror_log( '<esc>pa=' . print_r( <esc>pa, true ) );<cr><esc>
+augroup END
+
 
 
 
@@ -250,7 +256,6 @@ set noswapfile
 " if a file is changed outside Vim, automatically re-read it
 set autoread
 " }}}
-
 
 
 
@@ -363,7 +368,6 @@ set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.
 " Map <leader>el to error_log value
 " takes the whatever is under the cursor and wraps it in error_log( and
 " print_r( with parameter true and a label
-autocmd FileType php nnoremap <leader>el ^vg_daerror_log( '<esc>pa=' . print_r( <esc>pa, true ) );<cr><esc>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
