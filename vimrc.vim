@@ -123,7 +123,7 @@ let g:mapleader = ","
 
 	" ### Window / View Port Mapping {{{
 
-	 <leader>= adjusts viewports to be all the same size
+	" <leader>= adjusts viewports to be all the same size
 	noremap <leader>= <C-w>=
 
 	" shortcuts for window navigation
