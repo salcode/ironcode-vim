@@ -23,7 +23,6 @@ Bundle 'editorconfig/editorconfig-vim'
 " Hints
 Bundle 'ervandew/supertab'
 Bundle 'SirVer/ultisnips'
-"Bundle 'dsawardekar/wordpress.vim'
 Bundle 'shawncplus/phpcomplete.vim'
 
 " Syntax
