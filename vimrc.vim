@@ -21,13 +21,11 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'editorconfig/editorconfig-vim'
 
 " Hints
-Bundle 'ervandew/supertab'
 Bundle 'SirVer/ultisnips'
 Bundle 'shawncplus/phpcomplete.vim'
 
 " Syntax
 Bundle 'scrooloose/syntastic'
-Bundle 'groenewege/vim-less'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'StanAngeloff/php.vim'
 
@@ -35,15 +33,12 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'altercation/vim-colors-solarized'
 
 " Dash
-Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
 " Misc
-Bundle 'tyru/open-browser.vim'
 Bundle 'bling/vim-airline'
 
 " Git
-Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 
 " re-enable filetype
