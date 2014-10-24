@@ -92,6 +92,21 @@ set number
 
 " }}}
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tab and Indentation Settings {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" use shiftwidth for size of tab at beginning of line
+set smarttab
+
+" a tab is 4 spaces
+set tabstop=4
+
+" auto indent (<< or >>) is 4 spaces
+set shiftwidth=4
+
+" }}}
+
 " mapping my leader to comma
 let mapleader = ","
 let g:mapleader = ","
@@ -186,16 +201,12 @@ set guifont=Monaco:h13
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Be smart when using tabs ;)
-set smarttab
 
 
 " map j to gj and k to gk, so line navigation ignores line wrap
 nnoremap j gj
 nnoremap k gk
 
-" 1 tab == 4 spaces
-set tabstop=4                                           " a tab is four spaces
-set shiftwidth=4                                        " an autoindent (with <<) is four spaces
 set backspace=indent,eol,start                          " backspace through everything in insert mode
 
 
