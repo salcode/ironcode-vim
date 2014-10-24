@@ -67,6 +67,16 @@ set statusline+=%c,                     " cursor column
 set statusline+=%l/%L                   " cursor line/total lines
 set statusline+=\ %P                    " percent through file
 
+	" ### Buffers in airline status bar (plugin) {{{
+	" Enable the list of buffers
+	let g:airline#extensions#tabline#enabled = 1
+
+	" Show just the filename
+	let g:airline#extensions#tabline#fnamemod = ':t'
+	" }}}
+
+
+
 " }}}
 
 " Appearance {{{
@@ -86,14 +96,6 @@ set linebreak
 
 " line numbers
 set number
-
-	" ### Buffers in airline status bar (plugin) {{{
-	" Enable the list of buffers
-	let g:airline#extensions#tabline#enabled = 1
-
-	" Show just the filename
-	let g:airline#extensions#tabline#fnamemod = ':t'
-	" }}}
 
 " }}}
 
