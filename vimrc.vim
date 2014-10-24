@@ -1,3 +1,6 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible    " be iMproved, required
 filetype off        " required by Vundle, re-enabled below
 
@@ -48,6 +51,8 @@ Bundle 'airblade/vim-gitgutter'
 " re-enable filetype
 " must be after all Vundle Bundles are loaded
 filetype on
+
+" }}}
 
 " mapping my leader to comma
 let mapleader = ","
