@@ -10,7 +10,7 @@ Plugin 'gmarik/vundle'
 
 " searching and file management
 Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-vinegar'
 Bundle 'kien/ctrlp.vim'
 
 " Alignment and commenting
