@@ -128,6 +128,16 @@ set autoindent
 let mapleader = ","
 let g:mapleader = ","
 
+" Map <leader>ev (i.e. \ev) to edit .vimrc
+" and <leader>sv to source (apply) .vimrc
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Map <leader>eg (i.e. \eg) to edit .gvimrc
+" and <leader>sg to source (apply) .gvimrc
+nnoremap <leader>eg :split $MYGVIMRC<cr>
+nnoremap <leader>sg :source $MYGVIMRC<cr>
+
 " map j to gj and k to gk, so line navigation ignores line wrap
 " http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
@@ -333,18 +343,6 @@ set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.
 " => Mappings and Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Map <leader>a to interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
-nmap <Leader>a <Plug>(EasyAlign)
-
-" Map <leader>ev (i.e. \ev) to edit .vimrc
-" and <leader>sv to source (apply) .vimrc
-nnoremap <leader>ev :split $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" Map <leader>eg (i.e. \eg) to edit .gvimrc
-" and <leader>sg to source (apply) .gvimrc
-nnoremap <leader>eg :split $MYGVIMRC<cr>
-nnoremap <leader>sg :source $MYGVIMRC<cr>
 
 " Map <leader>el to error_log value
 " takes the whatever is under the cursor and wraps it in error_log( and
