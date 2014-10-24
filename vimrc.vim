@@ -223,10 +223,44 @@ augroup END
 
 " }}}
 
-" File Settings {{{
+" Search {{{
+" -------------------------------------------------------------
+" ignore case when searching
+set ignorecase
+" ...unless the search uses uppercase letters
+set smartcase
 
+" highlight search results
+set hlsearch
+
+" incriment search
+set incsearch
+
+" Plugin Ack use ag (the silver searcher) in place of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Plugin CTRL P, when performing tag search ignore the following
+let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
+
+" }}}
+
+" Files and backups {{{
+" -------------------------------------------------------------
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+
+" do not create a backup file before overwrite
+set nobackup
+
+" write a temporary backup file that is removed once
+" the original is successfully overwritten
+set writebackup
+
+" do all work in memory, no swap file
+set noswapfile
+
+" if a file is changed outside Vim, automatically re-read it
+set autoread
 
 	" file patterns to ignore {{{
 	" Ignore output and VCS files
@@ -254,44 +288,13 @@ set encoding=utf8
 	set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
 
 	" }}}
-
 " }}}
 
-" Search {{{
-" -------------------------------------------------------------
-" ignore case when searching
-set ignorecase
-" ...unless the search uses uppercase letters
-set smartcase
+" Registers {{{
 
-" highlight search results
-set hlsearch
+" use clipboard as primary register for y,d,p
+set clipboard=unnamed
 
-" incriment search
-set incsearch
-
-" Plugin Ack use ag (the silver searcher) in place of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Plugin CTRL P, when performing tag search ignore the following
-let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
-
-" }}}
-
-" Files and backups {{{
-" -------------------------------------------------------------
-" do not create a backup file before overwrite
-set nobackup
-
-" write a temporary backup file that is removed once
-" the original is successfully overwritten
-set writebackup
-
-" do all work in memory, no swap file
-set noswapfile
-
-" if a file is changed outside Vim, automatically re-read it
-set autoread
 " }}}
 
 
@@ -312,10 +315,6 @@ set autoread
 " project level .vimrc files
 set exrc
 
-"""""""""""""""""""""""""""
-" => use clipboard as primary register for y,d,p
-"""""""""""""""""""""""""""
-set clipboard=unnamed
 
 " load plugin files for specific file types (needed for plugin NerdCommenter)
 filetype plugin on
