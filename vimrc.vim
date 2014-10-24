@@ -53,30 +53,6 @@ filetype on
 
 " }}}
 
-" Status Line {{{
-" -------------------------------------------------------------
-set laststatus=2                        " Enable statusline
-set t_Co=256
-let g:airline_theme='solarized'
-
-set statusline=
-set statusline+=%{fugitive#statusline()} " Add git status from vim-fugitive plugin
-set statusline+=%tyru                    " tail of the filename
-set statusline+=%=                      " left/right separator
-set statusline+=%c,                     " cursor column
-set statusline+=%l/%L                   " cursor line/total lines
-set statusline+=\ %P                    " percent through file
-
-	" ### Buffers in airline status bar (plugin) {{{
-	" Enable the list of buffers
-	let g:airline#extensions#tabline#enabled = 1
-
-	" Show just the filename
-	let g:airline#extensions#tabline#fnamemod = ':t'
-	" }}}
-
-" }}}
-
 " Appearance {{{
 " -------------------------------------------------------------
 
@@ -104,6 +80,110 @@ set background=light
 
 " Plugin Vim Markdown disable folding
 let g:vim_markdown_folding_disabled=1
+
+" }}}
+
+" Status Line {{{
+" -------------------------------------------------------------
+set laststatus=2                        " Enable statusline
+set t_Co=256
+let g:airline_theme='solarized'
+
+set statusline=
+set statusline+=%{fugitive#statusline()} " Add git status from vim-fugitive plugin
+set statusline+=%tyru                    " tail of the filename
+set statusline+=%=                      " left/right separator
+set statusline+=%c,                     " cursor column
+set statusline+=%l/%L                   " cursor line/total lines
+set statusline+=\ %P                    " percent through file
+
+	" ### Buffers in airline status bar (plugin) {{{
+	" Enable the list of buffers
+	let g:airline#extensions#tabline#enabled = 1
+
+	" Show just the filename
+	let g:airline#extensions#tabline#fnamemod = ':t'
+	" }}}
+
+" }}}
+
+" Files and backups {{{
+" -------------------------------------------------------------
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" do not create a backup file before overwrite
+set nobackup
+
+" write a temporary backup file that is removed once
+" the original is successfully overwritten
+set writebackup
+
+" do all work in memory, no swap file
+set noswapfile
+
+" if a file is changed outside Vim, automatically re-read it
+set autoread
+
+" allow project level .vimrc files
+set exrc
+
+" load plugin files for specific file types (needed for plugin NerdCommenter)
+filetype plugin on
+
+	" file patterns to ignore {{{
+	" Ignore output and VCS files
+	set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+
+	" Ignore image files
+	set wildignore+=*.psd,*.png,*.jpg,*.gif,*.jpeg
+
+	" Ignore archive files
+	set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+
+	" Ignore bundler and sass cache
+	set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+
+	" Ignore temp and backup files
+	set wildignore+=*.swp,*~,._*
+
+	" Ignore Node and JS files
+	set wildignore+=*/node_modules/*,*.min.js
+
+	" Ignore WP Language files
+	set wildignore+=*.pot,*.po,*.mo
+
+	" Ignore Fonts
+	set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
+
+	" }}}
+" }}}
+
+" Search {{{
+" -------------------------------------------------------------
+" ignore case when searching
+set ignorecase
+" ...unless the search uses uppercase letters
+set smartcase
+
+" highlight search results
+set hlsearch
+
+" incriment search
+set incsearch
+
+" Plugin Ack use ag (the silver searcher) in place of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Plugin CTRL P, when performing tag search ignore the following
+let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
+
+" }}}
+
+" Registers {{{
+
+" use clipboard as primary register for y,d,p
+set clipboard=unnamed
 
 " }}}
 
@@ -225,87 +305,6 @@ augroup END
 
 
 " }}}
-
-" Search {{{
-" -------------------------------------------------------------
-" ignore case when searching
-set ignorecase
-" ...unless the search uses uppercase letters
-set smartcase
-
-" highlight search results
-set hlsearch
-
-" incriment search
-set incsearch
-
-" Plugin Ack use ag (the silver searcher) in place of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Plugin CTRL P, when performing tag search ignore the following
-let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
-
-" }}}
-
-" Files and backups {{{
-" -------------------------------------------------------------
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" do not create a backup file before overwrite
-set nobackup
-
-" write a temporary backup file that is removed once
-" the original is successfully overwritten
-set writebackup
-
-" do all work in memory, no swap file
-set noswapfile
-
-" if a file is changed outside Vim, automatically re-read it
-set autoread
-
-" allow project level .vimrc files
-set exrc
-
-" load plugin files for specific file types (needed for plugin NerdCommenter)
-filetype plugin on
-
-	" file patterns to ignore {{{
-	" Ignore output and VCS files
-	set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
-
-	" Ignore image files
-	set wildignore+=*.psd,*.png,*.jpg,*.gif,*.jpeg
-
-	" Ignore archive files
-	set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
-
-	" Ignore bundler and sass cache
-	set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-
-	" Ignore temp and backup files
-	set wildignore+=*.swp,*~,._*
-
-	" Ignore Node and JS files
-	set wildignore+=*/node_modules/*,*.min.js
-
-	" Ignore WP Language files
-	set wildignore+=*.pot,*.po,*.mo
-
-	" Ignore Fonts
-	set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.svg,*.std,*.pro,*.xsf
-
-	" }}}
-" }}}
-
-" Registers {{{
-
-" use clipboard as primary register for y,d,p
-set clipboard=unnamed
-
-" }}}
-
 
 
 
