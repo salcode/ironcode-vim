@@ -162,6 +162,21 @@ nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 	nnoremap <F5> :buffers<CR>:buffer<Space>
 	" }}}
 
+" Plugin EasyAlign, create command shortcut A
+" e.g. :A =>
+" aligns on =>
+com! -bang -range -nargs=* A <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
+
+" Plugin EasyAlign, <Enter> in Visual Mode triggers interactive align
+" e.g. 4V<Enter>
+" selection 4 lines and enters interactive align mode
+vmap <Enter> <Plug>(EasyAlign)
+
+
+
+
+
+
 " }}}
 
 " Search {{{
@@ -317,20 +332,6 @@ set wildignore+=*.eot,*.eol,*.ttf,*.otf,*.afm,*.ffil,*.fon,*.pfm,*.pfb,*.woff,*.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings and Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Map jk to ESC in visual mode
-"http://learnvimscriptthehardway.stevelosh.com/chapters/10.html
-inoremap jk <esc>
-
-" Map
-" :A $symbol
-" to
-" :EasyAlign $symbol
-" as a shortcut for vim-easy-align plugin
-com! -bang -range -nargs=* A <line1>,<line2>call easy_align#align('<bang>' == '!', 0, '', <q-args>)
-
-" Map <Enter> in Visual Mode to Interactive EasyAlign (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
 
 " Map <leader>a to interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
 nmap <Leader>a <Plug>(EasyAlign)
