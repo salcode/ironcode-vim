@@ -198,6 +198,19 @@ com! -bang -range -nargs=* A <line1>,<line2>call easy_align#align('<bang>' == '!
 " selection 4 lines and enters interactive align mode
 vmap <Enter> <Plug>(EasyAlign)
 
+" Plugin Ack <leader>f search
+nnoremap <leader>f :Ack<space>
+
+" Plugin CTRL P tag search
+nnoremap <leader>p :CtrlPTag<cr>
+
+" REMOVED to test
+" phpcomplete disable Ctrl+] (was conflicting)
+" see https://github.com/curtismchale/WPTT-Vim-Config/issues/62
+" https://github.com/shawncplus/phpcomplete.vim/issues/48
+" let g:phpcomplete_enhance_jump_to_definition = 0
+
+
 " PHP Filetype <leader>el - to wrap variable under cursor in an error log statement
 augroup php_error_log
 	autocmd!
@@ -224,20 +237,11 @@ set hlsearch
 " incriment search
 set incsearch
 
-" mapping search with Ack (plugin)
-nnoremap <leader>f :Ack<space>
-" use ag (the silver searcher) in place of ack
+" Plugin Ack use ag (the silver searcher) in place of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" CTRL P tag search
-nnoremap <leader>p :CtrlPTag<cr>
+" Plugin CTRL P, when performing tag search ignore the following
 let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
-
-" REMOVED to test
-" phpcomplete disable Ctrl+] (was conflicting)
-" see https://github.com/curtismchale/WPTT-Vim-Config/issues/62
-" https://github.com/shawncplus/phpcomplete.vim/issues/48
-" let g:phpcomplete_enhance_jump_to_definition = 0
 
 " }}}
 
