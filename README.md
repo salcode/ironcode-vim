@@ -7,7 +7,7 @@ This project is a fork of [Curtis McHale](https://github.com/curtismchale)'s exc
 
 Lazy Installation
 -----------------
-From the command line run `(echo set -- -r; curl "https://raw.githubusercontent.com/salcode/install.sh") | bash`
+From the command line run `(echo set -- -r; curl "https://raw.githubusercontent.com/salcode/ironcode-vim/master/install-ironcode-vim.sh") | bash`
 
 Updating Plugins
 ----------------
@@ -17,7 +17,7 @@ Detailed Installation
 ---------------------
 Run the following steps
 ```
-git clone http... ~/ironcode-vim
+git clone https://github.com/salcode/ironcode-vim.git
 ~/ironcode-vim/install.sh
 ```
 This will
