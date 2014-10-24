@@ -80,6 +80,31 @@ set background=light
 " Plugin Vim Markdown disable folding
 let g:vim_markdown_folding_disabled=1
 
+" Filetype vim set fold method to marker
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" }}}
+
+" Behavior {{{
+" -------------------------------------------------------------
+
+" allow backspacing over autoindent, line breaks, and start of insert
+set backspace=indent,eol,start
+
+" add keyword characters '-' and '$'
+" so they are no longer word boundaries, this allows them to be selected as
+" part of the word
+set iskeyword+=-,$
+
+" Remove trailing whitespace for these filetypes
+augroup remove_trailing_whitespace
+	autocmd!
+	autocmd FileType vim,php,c,cpp,css,java,ruby,javascript,scss autocmd BufWritePre * :%s/\s\+$//e
+augroup END
+
 " }}}
 
 " Status Line {{{
@@ -224,6 +249,11 @@ nnoremap <leader>sg :source $MYGVIMRC<cr>
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
+" add command :WS
+" Write with Spaces - allows the write command to execute while suspending
+" autocmd (i.e. saves without regexp to remove trailing spaces)
+command! WS noautocmd w
+
 	" ### Shortcuts to Modify Tabs/Spaces {{{
 
 	" Map <leader>ts2 to expand (t)abs to (s)paces with (2) characters indicating a tab
@@ -291,41 +321,10 @@ nnoremap <leader>p :CtrlPTag<cr>
 " https://github.com/shawncplus/phpcomplete.vim/issues/48
 " let g:phpcomplete_enhance_jump_to_definition = 0
 
-
 " PHP Filetype <leader>el - to wrap variable under cursor in an error log statement
 augroup php_error_log
 	autocmd!
 	autocmd FileType php nnoremap <leader>el ^vg_daerror_log( '<esc>pa=' . print_r( <esc>pa, true ) );<cr><esc>
 augroup END
 
-
-
-
-
-
 " }}}
-
-" allow backspacing over autoindent, line breaks, and start of insert
-set backspace=indent,eol,start
-
-
-augroup remove_trailing_whitespace
-	autocmd!
-	autocmd FileType c,cpp,css,java,php,javascript,scss autocmd BufWritePre * :%s/\s\+$//e
-augroup END
-
-" add command :WWS
-" Write With Spaces - allows the write command to execute while suspending
-" autocmd (i.e. saves without regexp to remove trailing spaces)
-command! WWS noautocmd w
-
-autocmd FileType *.md set wrap|set linebreak|set nolist
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Modify word boundary characters
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" remove - as a word boundary (i.e. making a keyword character)
-set iskeyword+=-
-" remove $ as a word boundary (i.e. making a keyword character)
-set iskeyword+=$
