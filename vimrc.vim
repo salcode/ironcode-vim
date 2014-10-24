@@ -75,8 +75,6 @@ set statusline+=\ %P                    " percent through file
 	let g:airline#extensions#tabline#fnamemod = ':t'
 	" }}}
 
-
-
 " }}}
 
 " Appearance {{{
@@ -140,23 +138,8 @@ let g:mapleader = ","
 
 " }}}
 
-" project level .vimrc files
-set exrc
-
-"""""""""""""""""""""""""""
-" => use clipboard as primary register for y,d,p
-"""""""""""""""""""""""""""
-set clipboard=unnamed
-
-"""""""""""""""""""""""""""
-" => Airline stuff basically stolen at this point from Travis Northcutt
-"""""""""""""""""""""""""""
-
-let g:wordpress_vim_ctags_path='/usr/local/bin/ctags'
-
-"""""""""""""""""""""""""""
-" => Searching Stuff
-"""""""""""""""""""""""""""
+" Search {{{
+" -------------------------------------------------------------
 " ignore case when searching
 set ignorecase
 " ...unless the search uses uppercase letters
@@ -168,20 +151,32 @@ set hlsearch
 " incriment search
 set incsearch
 
-" mapping search with Ack
+" mapping search with Ack (plugin)
 nnoremap <leader>f :Ack<space>
 " use ag (the silver searcher) in place of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" CTRL P
+" CTRL P tag search
 nnoremap <leader>p :CtrlPTag<cr>
-nnoremap <silent> <leader>r :ClearCtrlPCache<cr>
 let g:ctrlp_custom_ignore =['debug[[dir]]', 'gravity[[dir]]', 'akismet[[dir]]', 'user-switching[[dir]]', 'wp-migrate-db-pro[[dir]]', 'upgrade[[dir]]', 'uploads[[dir]]', 'twenty*[[dir]]']
 
+" REMOVED to test
 " phpcomplete disable Ctrl+] (was conflicting)
 " see https://github.com/curtismchale/WPTT-Vim-Config/issues/62
 " https://github.com/shawncplus/phpcomplete.vim/issues/48
-let g:phpcomplete_enhance_jump_to_definition = 0
+" let g:phpcomplete_enhance_jump_to_definition = 0
+
+
+
+
+" }}}
+" project level .vimrc files
+set exrc
+
+"""""""""""""""""""""""""""
+" => use clipboard as primary register for y,d,p
+"""""""""""""""""""""""""""
+set clipboard=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
