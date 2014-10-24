@@ -102,6 +102,9 @@ syntax on
 " Setting colorscheme light
 set background=light
 
+" Plugin Vim Markdown disable folding
+let g:vim_markdown_folding_disabled=1
+
 " }}}
 
 " Tab and Indentation Settings {{{
@@ -262,6 +265,12 @@ set noswapfile
 " if a file is changed outside Vim, automatically re-read it
 set autoread
 
+" allow project level .vimrc files
+set exrc
+
+" load plugin files for specific file types (needed for plugin NerdCommenter)
+filetype plugin on
+
 	" file patterns to ignore {{{
 	" Ignore output and VCS files
 	set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
@@ -312,13 +321,6 @@ set clipboard=unnamed
 
 
 
-" project level .vimrc files
-set exrc
-
-
-" load plugin files for specific file types (needed for plugin NerdCommenter)
-filetype plugin on
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -349,27 +351,3 @@ autocmd FileType *.md set wrap|set linebreak|set nolist
 set iskeyword+=-
 " remove $ as a word boundary (i.e. making a keyword character)
 set iskeyword+=$
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Wild settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Mappings and Shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-" Map <leader>el to error_log value
-" takes the whatever is under the cursor and wraps it in error_log( and
-" print_r( with parameter true and a label
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Dealing with folding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vim_markdown_folding_disabled=1 " turn off folding on markdown files
-
