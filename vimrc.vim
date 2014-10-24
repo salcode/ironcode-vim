@@ -1,6 +1,5 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------------------------------------
 set nocompatible    " be iMproved, required
 filetype off        " required by Vundle, re-enabled below
 
@@ -54,9 +53,8 @@ filetype on
 
 " }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status Line {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------------------------------------
 set laststatus=2                        " Enable statusline
 set t_Co=256
 let g:airline_theme='solarized'
@@ -71,9 +69,8 @@ set statusline+=\ %P                    " percent through file
 
 " }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------------------------------------
 
 " show invisibles
 set list
@@ -90,18 +87,18 @@ set linebreak
 " line numbers
 set number
 
-" -- Buffers in airline status bar (plugin) --
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
+	" ### Buffers in airline status bar (plugin) {{{
+	" Enable the list of buffers
+	let g:airline#extensions#tabline#enabled = 1
 
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
+	" Show just the filename
+	let g:airline#extensions#tabline#fnamemod = ':t'
+	" }}}
 
 " }}}
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tab and Indentation Settings {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------------------------------------
 
 " use shiftwidth for size of tab at beginning of line
 set smarttab
@@ -118,9 +115,8 @@ set autoindent
 " }}}
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mapping {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" -------------------------------------------------------------
 " map leader to comma
 let mapleader = ","
 let g:mapleader = ","
