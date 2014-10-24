@@ -1,29 +1,32 @@
-# WPTT-Vim-Config
+Iron Code Vim Configuration
+===========================
 
-This is my custom Vim configuration which is really for MacVim. Use it if you want or don't.
+A Vim Configuration focused on WordPress development and predominantly used with [MacVim](https://code.google.com/p/macvim/)
 
-I type DVORAK so some of my mappings may feel odd for you silly QWERTY people. I won't be taking any pull requests to change mappings (unless you have a really good case to prove me wrong).
+A fork of [Curtis McHale](https://github.com/curtismchale)'s excellent [WPTT Vim Config](https://github.com/curtismchale/WPTT-Vim-Config)
 
-## Install
+Lazy Installation
+-----------------
+From the command line run `(echo set -- -r; curl "https://raw.githubusercontent.com/salcode/install.sh") | bash`
 
-Change to your root directory `cd ~/` and then clone the repository.
+Updating Plugins
+----------------
+From within Vim type `:BundleInstall!`
 
-`git clone https://github.com/curtismchale/WPTT-Vim-Config.git .vim`
+Detailed Installation
+---------------------
+Run the install script at `http://`
 
-Install [Vundle](https://github.com/gmarik/Vundle.vim) by typing `git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/vundle`
+Recommended Utilities
+---------------------
+There are a few recommended utilitiesthat don't come with this
+repository.  This configuration works fine without these but they are nice.
+I recommend both of them and my preferred installation method is
+[homebrew](http://brew.sh/).
 
-Now use a symlink to point your .vimrc and .gvimrc files to the copies inside the .vim folder. Back up your .gvimrc and .vimrc files if you aren't sure you want to make the jump with me.
-
-`ln -s ~/.vim/.gvimrc ~/.gvimrc && ln -s ~/.vim/.vimrc ~/.vimrc`
-
-Now all your vim/gvim configs are done in `.vim/.vimrc` and `.vim/.gvimrc`.
-
-Open vim and then type `:BundleInstall` which tells Vundle to install all the bundles defined in your Vim config.
-
-There are a few dependencies that you'll need that don't come with the repository.
-
-1. [Exuberant CTags](http://ctags.sourceforge.net/) - `brew install ctags`. If you don't have homebrew installed [go get it](http://brew.sh/)
-2. [Ack](http://beyondgrep.com/) - `brew install ack`
+#### Once homebrew is installed
+1. [Exuberant CTags](http://ctags.sourceforge.net/): `brew install ctags`
+2. [Ag](http://geoff.greer.fm/ag/): `brew install the_silver_searcher`
 
 ### Problems with Git Commit Messages
 On a Mac, if you're getting the message
@@ -36,11 +39,6 @@ when you try to create a Git commit message with Vim, the issue is an [incorrect
 You can fix this problem by running
 `git config --global core.editor /usr/bin/vim`
 
-## Update
-
-Pull the master branch for this repository then use the Vundle update command below.
-
-`:BundleInstall!`
 
 ## Submodules
 
@@ -175,3 +173,7 @@ Ctags are very powerful but always feel like dark magic. There are a few steps t
 Once, this command is run re-open your files in Vim and
 completion (using `Ctrl+p` or `Tab`) should use the tags generated
 information.
+
+Credits
+-------
+[@salcode](https://github.com/salcode), [@curtismchale](https://github.com/curtismchale/)
