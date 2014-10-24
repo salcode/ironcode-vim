@@ -14,9 +14,6 @@ Bundle 'tpope/vim-vinegar'
 Bundle 'kien/ctrlp.vim'
 
 " Alignment and commenting
-Bundle 'tsaleh/vim-align'
-Bundle 'tobyS/vmustache'
-Bundle 'tobyS/pdv'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'editorconfig/editorconfig-vim'
