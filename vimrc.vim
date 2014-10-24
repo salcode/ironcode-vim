@@ -90,6 +90,13 @@ set linebreak
 " line numbers
 set number
 
+" -- Buffers in airline status bar (plugin) --
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -271,12 +278,6 @@ nnoremap <C-L> <C-W>l
 " Buffer Management
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" display buffers in airline status bar
-	" Enable the list of buffers
-	let g:airline#extensions#tabline#enabled = 1
-
-	" Show just the filename
-	let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Ctrl + Tab for next buffer
 nnoremap <C-Tab> :bnext<CR>
