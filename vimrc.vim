@@ -109,7 +109,6 @@ set t_Co=256
 let g:airline_theme='solarized'
 
 set statusline=
-set statusline+=%{fugitive#statusline()} " Add git status from vim-fugitive plugin
 set statusline+=%tyru                    " tail of the filename
 set statusline+=%=                      " left/right separator
 set statusline+=%c,                     " cursor column
