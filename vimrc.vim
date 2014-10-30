@@ -287,7 +287,7 @@ command! WS noautocmd w
 	nnoremap <C-S-Tab> :bprevious<CR>
 
 	" <leader>bd to delete the current buffer but keep the window split open
-	nnoremap <leader>bd :bprev\|bdelete #<CR>
+	nnoremap <leader>bd :bnext\|bdelete #<CR>
 
 	" <F5> to open a buffer menu, type buffer number and hit enter to switch
 	nnoremap <F5> :buffers<CR>:buffer<Space>
