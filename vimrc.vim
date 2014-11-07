@@ -246,9 +246,9 @@ nnoremap <leader>sg :source $MYGVIMRC<cr>
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
-" add command :W
-" write with sudo
-command W w !sudo tee % > /dev/null
+" add command :w!!
+" to write with sudo
+cmap w!! w !sudo tee % >/dev/null
 
 " add command :WS
 " Write with Spaces - allows the write command to execute while suspending
