@@ -35,10 +35,13 @@ Bundle 'altercation/vim-colors-solarized'
 " Dash
 Bundle 'rizzatti/dash.vim'
 
-" Misc
+" Status Line
 Bundle 'bling/vim-airline'
 
 " Git
+" run Git commands, directly from vim (and look for tags file in /.git)
+Bundle 'tpope/vim-fugitive'
+" display Git status for each line in the gutter
 Bundle 'airblade/vim-gitgutter'
 
 " re-enable filetype
