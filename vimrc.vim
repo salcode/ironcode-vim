@@ -78,6 +78,9 @@ set background=light
 " Plugin Vim Markdown disable folding
 let g:vim_markdown_folding_disabled=1
 
+" netrw (and plugin vinegar) add line numbers
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
 " Filetype vim set fold method to marker
 augroup filetype_vim
     autocmd!
