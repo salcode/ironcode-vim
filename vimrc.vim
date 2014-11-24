@@ -10,15 +10,21 @@ call vundle#rc()
 " let Vundle manage vundle
 Plugin 'gmarik/vundle'
 
+" starting point
+Bundle 'tpope/vim-sensible'
+
 " searching and file management
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-vinegar'
 Bundle 'kien/ctrlp.vim'
 
-" Alignment and commenting
-Bundle 'scrooloose/nerdcommenter'
+" Alignment, commenting, surround, repeat
+Bundle 'tpope/vim-commentary'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-abolish'
 
 " Hints
 Bundle 'SirVer/ultisnips'
