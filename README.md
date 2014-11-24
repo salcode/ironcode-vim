@@ -168,6 +168,9 @@ Markdown highlighting for Vim
 ### [Vim Fugitive](https://github.com/tpope/vim-fugitive)
 Git integration into Vim.
 
+### [Vim  Repeat](https://github.com/tpope/vim-repeat)
+Extends repeat functionality to plugins, particuarly __Vim Surround__, __Vim Abolish__, and __Vim Commentary__.
+
 ### [Vim  Surround](https://github.com/tpope/vim-surround)
 Adding and manipulating surround delimiters.
 
