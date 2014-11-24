@@ -51,6 +51,29 @@ You can fix this problem by running
 `git config --global core.editor /usr/bin/vim`
 
 
+## Shortcuts
+`:WSUDO` write with sudo, useful when editing a file that was opened without sudo but needs it
+
+`:WS` write with spaces, useful when saving a file but you do NOT want to remove trailing spaces
+
+`,ev` edit .vimrc
+
+`,sv` source .vimrc
+
+`,ts2`  `,ts4` `,tt2` `,tt4` set tabs to spaces size 2, spaces size 4, tabs size 2, and tabs size 4 respectively
+
+`,=` adjust all viewports to be the same size
+
+`Ctrl+h` `Ctrl+j` `Ctrl+k` `Ctrl+l` switch viewports (left, down, up, or right)
+
+`Ctrl+Tab` `Ctrl+Shift+Tab` Next or Previous Buffer
+
+`,bd` close current buffer but keep viewport open
+
+`<F5>` open buffer list, ready to accept a buffer number to switch to
+
+`,el` in PHP, take the current variable and create an error_log() statement for it using print_r()
+
 ## Plugins
 
 ### [Vundle](https://github.com/gmarik/Vundle.vim)
