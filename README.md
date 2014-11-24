@@ -144,6 +144,14 @@ Extension to netrw.
 ### [Syntastic](https://github.com/scrooloose/syntastic)
 Shows PHP errors with `>>` in the left side of your editor.
 
+### [Vim Abolish](https://github.com/tpope/vim-abolish)
+Installed specifically for format coercion (fooBar)
+- `cr_` or `crs` (coerce to snake_case) e.g. "foo_bar"
+- `crm` (coerce to MixedCase) e.g. FooBar
+- `crc` (coerce to camelCase) e.g. fooBar
+- `cru` (coerce to UPPER_CASE) e.g. FOO_BAR
+- `cr-` or `crk` (coerce to dash-case (kebab case)) e.g. foo-bar
+
 ### [Vim Airline](https://github.com/bling/vim-airline)
 Light weight status line for Vim.
 
