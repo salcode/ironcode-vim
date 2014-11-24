@@ -168,6 +168,23 @@ Markdown highlighting for Vim
 ### [Vim Fugitive](https://github.com/tpope/vim-fugitive)
 Git integration into Vim.
 
+### [Vim  Surround](https://github.com/tpope/vim-surround)
+Adding and manipulating surround delimiters.
+
+#### Examples
+- __abc zyx jjj__ `ysiw{` surround word cursor is on with braces __abc { zyx } jjj__
+- __"abc zyx jjj"__ `cs"'` change surround from " to ' __'abc zyx jjj'__
+- __abc zyx jjj__ `ys3w<p class="intro">` surround 3 words with HTML paragraph tag
+```
+<p class="intro">abc zyx jjj</p>
+```
+- __abc zyx jjj__ `yS3w<p class="intro">` surround 3 words with HTML paragraph tag (capital S causes tags on own lines)
+```
+<p class="intro">
+    abc zyx jjj
+</p>
+```
+
 Ctags
 -----
 Ctags are an index of your project.
