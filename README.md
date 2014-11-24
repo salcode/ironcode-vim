@@ -131,9 +131,6 @@ PHP omnicomplete with extra support
 ### [PHP Syntax](https://github.com/StanAngeloff/php.vim)
 5.3–5.6 support of PHP syntax
 
-### [NerdCommenter](https://github.com/scrooloose/nerdcommenter)
-`<leader>c<space>` will comment the current line in normal mode or the selection in visual mode
-
 ### [Vinegar](https://github.com/tpope/vim-vinegar)
 Extension to netrw.
 
@@ -158,6 +155,11 @@ Light weight status line for Vim.
 ### [Vim Colors Solarized](https://github.com/altercation/vim-colors-solarized)
 
 Solarized Color Scheme
+
+### [Vim Commentary](https://github.com/tpope/vim-commentary)
+
+- `gcc` will toggle comment the current line in normal mode
+- `gc` will toggle comment the current selection in visual mode
 
 ### [Vim Markdown](https://github.com/plasticboy/vim-markdown)
 
