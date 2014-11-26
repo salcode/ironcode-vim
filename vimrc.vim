@@ -328,6 +328,9 @@ vmap <Enter> <Plug>(EasyAlign)
 " Plugin Ack <leader>f search
 nnoremap <leader>f :Ack<space>
 
+" Plugin Vim Commentary <leader>c<SPACE> to toggle comment on current line
+nmap <leader>c<SPACE> <Plug>CommentaryLine
+
 " Plugin CTRL P tag search
 nnoremap <leader>p :CtrlPTag<cr>
 
