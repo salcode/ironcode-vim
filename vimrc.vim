@@ -112,6 +112,12 @@ augroup remove_trailing_whitespace
 	autocmd FileType vim,php,c,cpp,css,java,ruby,javascript,scss autocmd BufWritePre * :%s/\s\+$//e
 augroup END
 
+" Change default comments in PHP to // ( instead of /* */ )
+augroup FeCommentaryPhpDoubleSlash
+	autocmd!
+	autocmd FileType php setlocal commentstring=//\ %s
+augroup END
+
 " }}}
 
 " Status Line {{{
