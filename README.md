@@ -86,6 +86,9 @@ Run Ack (or Ag) from Vim and see results in a split window
 Example `:Ack 'neeedle'` will search your project for __needle__.
 #### Modified to use Ag in .vimrc
 
+### [buffkill.vim](https://github.com/mattdbridges/bufkill.vim)
+`:BD` deletes a buffer but allows the window/viewport to stay open
+
 ### [Dash](https://github.com/rizzatti/dash.vim)
 Requires the [Dash app](http://kapeli.com/dash) for documentation lookup.  
 Example usage `:Dash register_post_type`
