@@ -25,6 +25,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-abolish'
+Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'mattdbridges/bufkill.vim'
 
 " Hints
