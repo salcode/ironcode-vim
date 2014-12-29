@@ -22,8 +22,23 @@ Bundle 'tpope/vim-sensible'
 
 " }}}
 
+" Vim Vinegar Plugin {{{
+" -------------------------------------------------------------
+" Enhancement to netrw, Vim's directory browser
+" https://github.com/tpope/vim-vinegar
+" `-` in __normal__ mode, opens a directory browser in
+" your current window, repeated `-` moves up the directory
+" tree. Clicking <Enter> opens the currently highlighted file
+Bundle 'tpope/vim-vinegar'
+
+" add line numbers to netrw (and vinegar)
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+" }}}
+
 " Vim Commentary Plugin {{{
 " -------------------------------------------------------------
+"  https://github.com/tpope/vim-commentary
 " `gcc` will toggle comment the current line in __normal__ mode
 " `gc` will toggle comment the current selection in __visual__ mode
 "
