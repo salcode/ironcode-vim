@@ -152,6 +152,23 @@ augroup END
 
 	" }}}
 
+	" File and Backup Settings {{{
+	" -------------------------------------------------------------
+	" do not create a backup file before overwrite
+	set nobackup
+
+	" write a temporary backup file that is removed once
+	" the original is successfully overwritten
+	set writebackup
+
+	" do all work in memory, no swap file
+	set noswapfile
+
+	" if a file is changed outside Vim, automatically re-read it
+	set autoread
+
+	" }}}
+
 	" Search Settings {{{
 	" -------------------------------------------------------------
 	" ignore case when searching
