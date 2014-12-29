@@ -35,6 +35,14 @@ Bundle 'editorconfig/editorconfig-vim'
 
 " }}}
 
+" Solarized Color Scheme Plugin {{{
+" https://github.com/altercation/vim-colors-solarized
+" -------------------------------------------------------------
+" Color scheme for vim
+Bundle 'altercation/vim-colors-solarized'
+
+" }}}
+
 " Syntastic Plugin {{{
 " https://github.com/scrooloose/syntastic
 " -------------------------------------------------------------
