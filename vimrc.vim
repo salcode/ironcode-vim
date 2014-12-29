@@ -203,6 +203,7 @@ augroup END
 	" -------------------------------------------------------------
 	" use clipboard as primary register for y,d,p
 	set clipboard=unnamed
+
 	" }}}
 
 	" Tabs and Spaces Settings {{{
@@ -224,11 +225,15 @@ augroup END
 
 	" }}}
 
-	" use clipboard as primary register for y,d,p
-	set clipboard=unnamed
-	" }}}
+	" Folding Settings {{{
+	" -------------------------------------------------------------
+	" Filetype vim set fold method to marker
+		augroup fe_vim_folding
+			autocmd!
+			autocmd FileType vim setlocal foldmethod=marker
+		augroup END
 
-" }}}
+	" }}}
 
 " General Mappings {{{
 
