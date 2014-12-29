@@ -173,6 +173,29 @@ augroup END
 	set clipboard=unnamed
 	" }}}
 
+	" Tabs and Spaces Settings {{{
+	" -------------------------------------------------------------
+	" See __Modify Tabs and Spaces Settings Mappings__ for mappings
+	" to modify quickly
+
+	" use shiftwidth for size of tab at beginning of line
+	set smarttab
+
+	" a tab is 4 spaces
+	set tabstop=4
+
+	" auto indent (<< or >>) is 4 spaces
+	set shiftwidth=4
+
+	" copy indent from current line when starting a new line
+	set autoindent
+
+	" }}}
+
+	" use clipboard as primary register for y,d,p
+	set clipboard=unnamed
+	" }}}
+
 " }}}
 
 " General Mappings {{{
