@@ -1,6 +1,5 @@
 " Vundle Setup {{{
 " -------------------------------------------------------------
-
 " Required by Vundle
 set nocompatible              " be iMproved, required
 filetype off        " required by Vundle, re-enabled below
@@ -15,27 +14,27 @@ Plugin 'gmarik/vundle'
 " }}}
 "
 " Syntastic Plugin {{{
+" https://github.com/scrooloose/syntastic
 " -------------------------------------------------------------
 " Marks incorrect syntax lines with `>>` in the left side of the
 " editor (the gutter).  Installed for PHP syntax checking but
 " supports other languages, as well.
-" https://github.com/scrooloose/syntastic
 Bundle 'scrooloose/syntastic'
 
 " }}}
 
 " Vim Sensible Plugin {{{
+" https://github.com/tpope/vim-sensible
 " -------------------------------------------------------------
 " Sensible Default Vim Settings
-" https://github.com/tpope/vim-sensible
 Bundle 'tpope/vim-sensible'
 
 " }}}
 
 " Vim Vinegar Plugin {{{
+" https://github.com/tpope/vim-vinegar
 " -------------------------------------------------------------
 " Enhancement to netrw, Vim's directory browser
-" https://github.com/tpope/vim-vinegar
 " `-` in __normal__ mode, opens a directory browser in
 " your current window, repeated `-` moves up the directory
 " tree. Clicking <Enter> opens the currently highlighted file
@@ -47,8 +46,8 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 " }}}
 
 " Vim Commentary Plugin {{{
-" -------------------------------------------------------------
 "  https://github.com/tpope/vim-commentary
+" -------------------------------------------------------------
 " `gcc` will toggle comment the current line in __normal__ mode
 " `gc` will toggle comment the current selection in __visual__ mode
 "
