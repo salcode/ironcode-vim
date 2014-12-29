@@ -45,17 +45,20 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 "  note: after vundle block, the following modifications are included*:
 "  - change PHP comment style to // (instead of default /* */)
 Bundle 'tpope/vim-commentary'
+
 "  }}}
 
 " Vundle Setup Complete {{{
 " -------------------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
+
 "  }}}
 
 " * why do autocmd FileType settings appear after vundle block?{{{
 " -------------------------------------------------------------
 " Vundle requires filetype plugin off at the beginning :
+"
 " }}}
 
 " Vim Commentary Plugin Modifications* {{{
@@ -66,4 +69,5 @@ augroup fe_commentary_php_commentstring
 	autocmd!
 	autocmd FileType php setlocal commentstring=//\ %s
 augroup END
+
 " }}}
