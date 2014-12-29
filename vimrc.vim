@@ -159,4 +159,14 @@ augroup END
 	nnoremap <F5> :buffers<CR>:buffer<Space>
 
 	" }}}
+
+	" Time Save Mappings {{{
+	" -------------------------------------------------------------
+	" PHP only `<leader>el` wraps the variable under cursor
+	" in an error log statement with print_r
+	augroup php_error_log
+		autocmd!
+		autocmd FileType php nnoremap <leader>el ^vg_daerror_log( '<esc>pa=' . print_r( <esc>pa, true ) );<cr><esc>
+	augroup END
+	"  }}}
 " }}}
