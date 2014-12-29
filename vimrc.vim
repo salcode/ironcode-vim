@@ -133,13 +133,17 @@ augroup END
 
 " }}}
 
-" Modify <leader> to comma {{{
-" -------------------------------------------------------------
-" map comma to leader
-" and backslash to comma (so we don't lose the comma functionality)
-" note: default comma functionality is to repeat
-" `f` or `t` find in reverse direction
-let mapleader = ","
-let g:mapleader = ","
-noremap \ ,
+" General Mappings {{{
+
+	" Modify <leader> to comma {{{
+	" -------------------------------------------------------------
+	" map comma to leader
+	" and backslash to comma (so we don't lose the comma functionality)
+	" note: default comma functionality is to repeat
+	" `f` or `t` find in reverse direction
+	let mapleader = ","
+	let g:mapleader = ","
+	noremap \ ,
+	" }}}
+
 " }}}
