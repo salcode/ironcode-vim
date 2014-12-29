@@ -12,7 +12,18 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " }}}
-"
+
+" EditorConfig Plugin {{{
+" https://github.com/editorconfig/editorconfig-vim
+" -------------------------------------------------------------
+" Adds support for an .editorconfig file, which allows an
+" editor configuration to be shared across a project even when
+" users are using different editors. Read more about the
+" [EditorConfig Project](https://github.com/editorconfig/editorconfig-vim)
+Bundle 'editorconfig/editorconfig-vim'
+
+" }}}
+
 " Syntastic Plugin {{{
 " https://github.com/scrooloose/syntastic
 " -------------------------------------------------------------
