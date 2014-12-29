@@ -168,5 +168,16 @@ augroup END
 		autocmd!
 		autocmd FileType php nnoremap <leader>el ^vg_daerror_log( '<esc>pa=' . print_r( <esc>pa, true ) );<cr><esc>
 	augroup END
+
+	" Map <leader>ev (i.e. ,ev) to edit .vimrc
+	" and <leader>sv to source (apply) .vimrc
+	nnoremap <leader>ev :split $MYVIMRC<cr>
+	nnoremap <leader>sv :source $MYVIMRC<cr>
+
+	" Map <leader>eg (i.e. ,eg) to edit .gvimrc
+	" and <leader>sg to source (apply) .gvimrc
+	nnoremap <leader>eg :split $MYGVIMRC<cr>
+	nnoremap <leader>sg :source $MYGVIMRC<cr>
+
 	"  }}}
 " }}}
