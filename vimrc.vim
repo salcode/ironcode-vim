@@ -83,7 +83,7 @@ filetype plugin indent on    " required
 
 " Vim Commentary Plugin Modifications* {{{
 " -------------------------------------------------------------
- Change PHP comment string to
+" Change PHP comment string to
 "  - change PHP comment style to // (instead of default /* */)
 augroup fe_commentary_php_commentstring
 	autocmd!
