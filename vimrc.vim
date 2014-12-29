@@ -137,6 +137,13 @@ augroup END
 	noremap \ ,
 	" }}}
 
+	" add command :WSUDO to write with sudo {{{
+	" -------------------------------------------------------------
+	" `:WSUDO` prompts the user for the root password and writes the
+	" file (using the __sudo__functionality)
+	command! WSUDO w !sudo tee % > /dev/null
+	" }}}
+
 	" Window Mappings {{{
 	" -------------------------------------------------------------
 	" shortcuts for window navigation
