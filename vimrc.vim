@@ -53,6 +53,21 @@ Bundle 'scrooloose/syntastic'
 
 " }}}
 
+" Vim Abolish Plugin {{{
+" https://github.com/tpope/vim-abolish
+" -------------------------------------------------------------
+" Installed specifically for format coercion (fooBar)
+" - `cr_` or `crs` (coerce to snake_case) e.g. "foo_bar"
+" - `crm` (coerce to MixedCase) e.g. FooBar
+" - `crc` (coerce to camelCase) e.g. fooBar
+" - `cru` (coerce to UPPER_CASE) e.g. FOO_BAR
+" - `cr-` or `crk` (coerce to dash-case (kebab case)) e.g. foo-bar
+"
+" This plugin also does other things but they go 
+" unused in my workflow
+Bundle 'tpope/vim-abolish'
+" }}}
+
 " Vim Airline Plugin {{{
 " https://github.com/bling/vim-airline
 " -------------------------------------------------------------
