@@ -132,6 +132,49 @@ augroup END
 
 " }}}
 
+" General Settings {{{
+" -------------------------------------------------------------
+
+	" Display Settings {{{
+	" -------------------------------------------------------------
+	" show invisible characters
+	set list
+
+	" show line numbers
+	set number
+
+	" do not wrap lines
+	set nowrap
+
+	" Syntax Highlighing
+	syntax enable
+	syntax on
+
+	" }}}
+
+	" Search Settings {{{
+	" -------------------------------------------------------------
+	" ignore case when searching
+	set ignorecase
+	" ...unless the search uses uppercase letters
+	set smartcase
+
+	" highlight search results
+	set hlsearch
+
+	" increment search
+	set incsearch
+
+	" }}}
+
+	" Register Settings {{{
+	" -------------------------------------------------------------
+	" use clipboard as primary register for y,d,p
+	set clipboard=unnamed
+	" }}}
+
+" }}}
+
 " General Mappings {{{
 
 	" Modify <leader> to comma {{{
