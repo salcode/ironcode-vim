@@ -45,6 +45,15 @@ Bundle 'scrooloose/syntastic'
 
 " }}}
 
+" Vim Fugitive Plugin {{{
+" https://github.com/tpope/vim-fugitive
+" -------------------------------------------------------------
+" Run Git commands directly from vim and looks for tags file in
+" /.git, which is import for ctags setup
+Bundle 'tpope/vim-fugitive'
+
+" }}}
+
 " Vim Sensible Plugin {{{
 " https://github.com/tpope/vim-sensible
 " -------------------------------------------------------------
