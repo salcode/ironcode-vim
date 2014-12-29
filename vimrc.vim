@@ -13,6 +13,17 @@ Plugin 'gmarik/vundle'
 
 " }}}
 
+" Bufkill Plugin {{{
+" https://github.com/mattdbridges/bufkill.vim
+" -------------------------------------------------------------
+" `:BD` deletes a buffer but allows the window/viewport to
+" stay open
+Bundle 'mattdbridges/bufkill.vim'
+
+" map `<leader>bd` to `:BD`
+nnoremap <leader>bd! :BD<CR>
+" }}}
+
 " EditorConfig Plugin {{{
 " https://github.com/editorconfig/editorconfig-vim
 " -------------------------------------------------------------
@@ -90,4 +101,15 @@ augroup fe_commentary_php_commentstring
 	autocmd FileType php setlocal commentstring=//\ %s
 augroup END
 
+" }}}
+
+" Modify <leader> to comma {{{
+" -------------------------------------------------------------
+" map comma to leader
+" and backslash to comma (so we don't lose the comma functionality)
+" note: default comma functionality is to repeat
+" `f` or `t` find in reverse direction
+let mapleader = ","
+let g:mapleader = ","
+noremap \ ,
 " }}}
