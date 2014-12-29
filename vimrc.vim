@@ -13,6 +13,16 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " }}}
+"
+" Syntastic Plugin {{{
+" -------------------------------------------------------------
+" Marks incorrect syntax lines with `>>` in the left side of the
+" editor (the gutter).  Installed for PHP syntax checking but
+" supports other languages, as well.
+" https://github.com/scrooloose/syntastic
+Bundle 'scrooloose/syntastic'
+
+" }}}
 
 " Vim Sensible Plugin {{{
 " -------------------------------------------------------------
