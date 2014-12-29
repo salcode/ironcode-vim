@@ -45,6 +45,27 @@ Bundle 'scrooloose/syntastic'
 
 " }}}
 
+" Vim Airline Plugin {{{
+" https://github.com/bling/vim-airline
+" -------------------------------------------------------------
+" Lightweight status line.
+Bundle 'bling/vim-airline'
+
+" display list of buffers by filename
+let g:airline#extensions#tabline#enabled = 1
+" ignore the path of the buffer (show only filename)
+let g:airline#extensions#tabline#fnamemod = ':t'
+" }}}
+
+" Vim Fugitive Plugin {{{
+" https://github.com/tpope/vim-fugitive
+" -------------------------------------------------------------
+" Run Git commands directly from vim and looks for tags file in
+" /.git, which is import for ctags setup
+Bundle 'tpope/vim-fugitive'
+
+" }}}
+
 " Vim Fugitive Plugin {{{
 " https://github.com/tpope/vim-fugitive
 " -------------------------------------------------------------
