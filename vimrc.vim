@@ -167,6 +167,15 @@ augroup END
 
 	" }}}
 
+	"  Word Boundary Settings {{{
+	" -------------------------------------------------------------
+	" add keyword characters '-' and '$'
+	" so they are no longer word boundaries, this allows them to be selected as
+	" part of the word
+	set iskeyword+=-,$
+
+	" }}}
+
 	" File and Backup Settings {{{
 	" -------------------------------------------------------------
 	" do not create a backup file before overwrite
