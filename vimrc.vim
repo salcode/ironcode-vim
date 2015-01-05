@@ -130,6 +130,15 @@ Bundle 'tpope/vim-sensible'
 
 " }}}
 
+" UltiSnips Plugin {{{
+" https://github.com/SirVer/ultisnips
+" -------------------------------------------------------------
+" Vim Snippets
+" `wpcpt<tab>` will trigger WordPress CPT snippet
+Bundle 'SirVer/ultisnips'
+
+" }}}
+
 " Vim Vinegar Plugin {{{
 " https://github.com/tpope/vim-vinegar
 " -------------------------------------------------------------
