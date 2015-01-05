@@ -89,6 +89,39 @@ Bundle 'tpope/vim-fugitive'
 
 " }}}
 
+" Vim Repeat Plugin {{{
+" https://github.com/tpope/vim-repeat
+" -------------------------------------------------------------
+" Extends repeat functionality to plugins,
+" particuarly __Vim Surround__, __Vim Abolish__,
+" and __Vim Commentary__.
+Bundle 'tpope/vim-repeat'
+
+" }}}
+
+" Vim Surround Plugin {{{
+" https://github.com/tpope/vim-surround
+" -------------------------------------------------------------
+" Surround Default Vim Settings
+" Adding and manipulating surround delimiters.
+"
+" #### Examples
+" - __abc zyx jjj__ `ysiw{` surround word cursor is on with braces __abc { zyx } jjj__
+" - __"abc zyx jjj"__ `cs"'` change surround from " to ' __'abc zyx jjj'__
+" - __abc zyx jjj__ `ys3w<p class="intro">` surround 3 words with HTML paragraph tag
+" ```
+" <p class="intro">abc zyx jjj</p>
+" ```
+" - __abc zyx jjj__ `yS3w<p class="intro">` surround 3 words with HTML paragraph tag (capital S causes tags on own lines)
+" ```
+" <p class="intro">
+"     abc zyx jjj
+" </p>
+" ```
+Bundle 'tpope/vim-surround'
+
+" }}}
+
 " Vim Sensible Plugin {{{
 " https://github.com/tpope/vim-sensible
 " -------------------------------------------------------------
