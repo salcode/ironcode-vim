@@ -26,11 +26,9 @@ This will
 - clone the vundle package manager via git
 - run vim and trigger an install of all plugins defined for vundle
 
-
-
 Recommended Utilities
 ---------------------
-There are a few recommended utilitiesthat don't come with this
+There are a few recommended utilities that don't come with this
 repository.  This configuration works fine without these but they are nice.
 I recommend both of them and my preferred installation method is
 [homebrew](http://brew.sh/).

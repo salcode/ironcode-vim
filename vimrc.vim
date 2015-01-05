@@ -63,7 +63,7 @@ Bundle 'scrooloose/syntastic'
 " - `cru` (coerce to UPPER_CASE) e.g. FOO_BAR
 " - `cr-` or `crk` (coerce to dash-case (kebab case)) e.g. foo-bar
 "
-" This plugin also does other things but they go 
+" This plugin also does other things but they go
 " unused in my workflow
 Bundle 'tpope/vim-abolish'
 " }}}
