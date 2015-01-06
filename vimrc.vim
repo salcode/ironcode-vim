@@ -80,6 +80,19 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
 
+" Vim Better Whitespace {{{
+" https://github.com/ntpeters/vim-better-whitespace
+" -------------------------------------------------------------
+" Highlight trailing whitespace
+" `:StripWhitespace` strip trailing whitespace
+" `:ToggleWhitespace` toggle whitespace trailing
+Bundle 'ntpeters/vim-better-whitespace'
+
+" `<leader>sws` runs :StripWhitespace
+nnoremap <leader>sws :StripWhitespace<CR>
+
+" }}}
+
 " Vim Fugitive Plugin {{{
 " https://github.com/tpope/vim-fugitive
 " -------------------------------------------------------------
