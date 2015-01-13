@@ -220,6 +220,9 @@ augroup END
 	syntax enable
 	syntax on
 
+	" highlight current line
+	set cursorline
+
 	" }}}
 
 	"  Word Boundary Settings {{{
