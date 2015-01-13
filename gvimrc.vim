@@ -3,6 +3,7 @@
 
 " use solarized colorscheme only in GUI
 colorscheme solarized
+set background=light
 
 " set font and font size
 set guifont=Monaco:h13

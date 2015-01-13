@@ -223,6 +223,10 @@ augroup END
 	" highlight current line
 	set cursorline
 
+	" colorscheme, for console
+	" .gvimrc overrides these settings
+	colorscheme desert
+
 	" }}}
 
 	"  Word Boundary Settings {{{
