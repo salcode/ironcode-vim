@@ -306,6 +306,8 @@ augroup END
 
 	" }}}
 
+" }}}
+
 " General Mappings {{{
 
 	" Modify <leader> to comma {{{
