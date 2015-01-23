@@ -88,9 +88,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " `:ToggleWhitespace` toggle whitespace trailing
 Bundle 'ntpeters/vim-better-whitespace'
 
-" `<leader>sws` runs :StripWhitespace
-nnoremap <leader>sws :StripWhitespace<CR>
-
 " }}}
 
 " Vim Fugitive Plugin {{{
@@ -386,6 +383,13 @@ augroup END
 	nnoremap <leader>sg :source $MYGVIMRC<cr>
 
 	"  }}}
+
+	" Vim Better Whitespace Plugin Mapping {{{
+	" -------------------------------------------------------------
+	" `<leader>sws` runs :StripWhitespace
+	nnoremap <leader>sws :StripWhitespace<CR>
+	" }}}
+
 " }}}
 
 " GUI Settings {{{
