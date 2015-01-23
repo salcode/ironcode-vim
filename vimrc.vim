@@ -387,3 +387,20 @@ augroup END
 
 	"  }}}
 " }}}
+
+" GUI Settings {{{
+" -------------------------------------------------------------
+" specific settings for when running VIM in GUI
+
+if has('gui_running')
+
+	" use solarized colorscheme
+	colorscheme solarized
+	set background=light
+
+	" set font and font size
+	set guifont=Monaco:h13
+
+endif
+
+" }}}
