@@ -102,7 +102,7 @@ Bundle 'tpope/vim-fugitive'
 " Vim Livedown Plugin {{{
 " https://github.com/shime/vim-livedown
 " -------------------------------------------------------------
-" Adds preview of markdown documents in browser via the 
+" Adds preview of markdown documents in browser via the
 " node module livedown
 Bundle 'shime/vim-livedown'
 
