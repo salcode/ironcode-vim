@@ -270,6 +270,12 @@ augroup END
 
 	" }}}
 
+	" Undo Settings {{{
+	" -------------------------------------------------------------
+	" persist undo when changing buffers
+		set hid
+	" }}}
+
 	" Search Settings {{{
 	" -------------------------------------------------------------
 	" ignore case when searching
