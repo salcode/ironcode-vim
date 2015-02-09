@@ -242,6 +242,12 @@ augroup END
 	" .gvimrc overrides these settings
 	colorscheme desert
 
+	" highlight column 80 if supported
+	if (exists('+colorcolumn'))
+		set colorcolumn=80
+		highlight ColorColumn ctermbg=9
+	endif
+
 	" }}}
 
 	"  Word Boundary Settings {{{
