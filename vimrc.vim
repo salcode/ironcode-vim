@@ -104,6 +104,8 @@ Bundle 'tpope/vim-fugitive'
 " -------------------------------------------------------------
 " Adds preview of markdown documents in browser via the
 " node module livedown
+" :LivedownPreview
+" :LivedownKill
 Bundle 'shime/vim-livedown'
 
 " should markdown preview get shown automatically upon opening markdown buffer
