@@ -240,9 +240,13 @@ augroup END
 	" highlight current line
 	set cursorline
 
-	" colorscheme, for console
-	" .gvimrc overrides these settings
-	colorscheme desert
+	" colorscheme
+	let g:solarized_termcolors = 256
+	colorscheme solarized
+	set background=light
+
+	" set font and font size for GUI
+	set guifont=Monaco:h13
 
 	" highlight column 80 if supported
 	if (exists('+colorcolumn'))
@@ -429,22 +433,5 @@ augroup END
 	" `<leader>sws` runs :StripWhitespace
 	nnoremap <leader>sws :StripWhitespace<CR>
 	" }}}
-
-" }}}
-
-" GUI Settings {{{
-" -------------------------------------------------------------
-" specific settings for when running VIM in GUI
-
-if has('gui_running')
-
-	" use solarized colorscheme
-	colorscheme solarized
-	set background=light
-
-	" set font and font size
-	set guifont=Monaco:h13
-
-endif
 
 " }}}
