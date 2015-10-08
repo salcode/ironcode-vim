@@ -18,6 +18,9 @@ Plug 'tpope/vim-commentary'
 " Add support for .editorconfig file in a project
 Plug 'editorconfig/editorconfig-vim'
 
+" Auto-detect indentation (size and type)
+Plug 'tpope/vim-sleuth'
+
 call plug#end()
 
 if has('gui_running')
@@ -47,6 +50,9 @@ set list
 
 " show line numbers
 set number
+
+" display tabs as taking up 4 spaces
+set tabstop=4
 
 " set font and font size for GUI
 set guifont=Monaco:h13
