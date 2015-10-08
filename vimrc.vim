@@ -20,10 +20,12 @@ Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
-" Configure Solarized Color Scheme
-syntax enable
-set background=light
-colorscheme solarized
+if has('gui_running')
+	" Configure Solarized Color Scheme
+	syntax enable
+	set background=light
+	colorscheme solarized
+endif
 
 " Configure File Explorer to include line numbers
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
