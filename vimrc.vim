@@ -60,3 +60,9 @@ set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+" shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
