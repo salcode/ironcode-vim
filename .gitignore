@@ -83,6 +83,9 @@ Thumbs.db
 /bundle
 /plugged
 
+# ignore all files in undodir
+/undodir/*
+
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
@@ -90,3 +93,4 @@ Thumbs.db
 # track these files, if they exist
 !.gitignore
 !.editorconfig
+!.gitkeep
