@@ -17,8 +17,5 @@ ln -sf ~/ironcode-vim/gvimrc.vim ~/.gvimrc
 ln -sf ~/ironcode-vim/vimrc.vim ~/.vimrc
 ln -sfh ~/ironcode-vim ~/.vim
 
-# install vundle
-git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/vundle
-
 # run vim and install plugins
-vim +PluginInstall +qall
+vim +PlugInstall +qall
