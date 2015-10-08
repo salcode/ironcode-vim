@@ -15,6 +15,9 @@ Plug 'bling/vim-airline'
 " Comment toggling, trigger with `gcc`
 Plug 'tpope/vim-commentary'
 
+" Add support for .editorconfig file in a project
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 " Configure Solarized Color Scheme
