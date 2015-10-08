@@ -30,3 +30,30 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 	let g:airline#extensions#tabline#enabled = 1
 	" ignore the path of the buffer (show only filename)
 	let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Configure Comment toggling style to "//" instead of "/*" in PHP
+augroup fe_commentary_php_commentstring
+	autocmd!
+	autocmd FileType php setlocal commentstring=//\ %s
+augroup END
+
+" show invisible characters
+set list
+
+" show line numbers
+set number
+
+" set font and font size for GUI
+set guifont=Monaco:h13
+
+" highlight column 80 if supported
+if (exists('+colorcolumn'))
+	set colorcolumn=80
+	highlight ColorColumn ctermbg=9
+endif
+
+" Make undo persistant (across buffer changes or file close and open)
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
