@@ -21,6 +21,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Auto-detect indentation (size and type)
 Plug 'tpope/vim-sleuth'
 
+" Add ability to close buffer and keep window, :BD
+Plug 'vim-scripts/bufkill.vim'
+
 call plug#end()
 
 if has('gui_running')
