@@ -60,6 +60,15 @@ set tabstop=4
 " set font and font size for GUI
 set guifont=Monaco:h13
 
+" highlight all search matches after search is complete
+set hlsearch
+
+" ignore case when searching
+set ignorecase
+
+" override ignorecase if the search pattern contains upper case characters
+set smartcase
+
 " highlight column 80 if supported
 if (exists('+colorcolumn'))
 	set colorcolumn=80
