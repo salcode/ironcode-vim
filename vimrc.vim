@@ -87,6 +87,9 @@ set noswapfile
 " if a file is changed outside Vim, automatically re-read it
 set autoread
 
+" set leader to ,
+let mapleader = ","
+
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
