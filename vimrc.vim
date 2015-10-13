@@ -81,6 +81,9 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
+" do all work in memory, no swap file
+set noswapfile
+
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
