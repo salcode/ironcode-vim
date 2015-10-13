@@ -84,6 +84,9 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 " do all work in memory, no swap file
 set noswapfile
 
+" if a file is changed outside Vim, automatically re-read it
+set autoread
+
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
