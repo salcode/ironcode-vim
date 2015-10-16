@@ -101,3 +101,8 @@ nnoremap ]b :bnext<CR>
 nnoremap ]B :blast<CR>
 nnoremap [b :bprev<CR>
 nnoremap [B :bfirst<CR>
+
+" map j to gj and k to gk, so line navigation ignores line wrap
+" http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
+nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
+nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
