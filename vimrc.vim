@@ -109,3 +109,6 @@ nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
 " use clipboard as primary register for y,d,p
 set clipboard=unnamed
+
+" easy access to register containing last yank (ignoring delete and replace)
+nnoremap <leader>p "0p
