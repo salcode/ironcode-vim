@@ -106,3 +106,6 @@ nnoremap [B :bfirst<CR>
 " http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
+
+" use clipboard as primary register for y,d,p
+set clipboard=unnamed
