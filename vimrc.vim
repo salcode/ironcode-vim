@@ -27,6 +27,9 @@ Plug 'vim-scripts/bufkill.vim'
 " Add undo tree exploration with :GundoToggle
 Plug 'sjl/gundo.vim'
 
+" Look for ctags file in .git directory
+Plug 'tpope/vim-fugitive/'
+
 call plug#end()
 
 if has('gui_running')
