@@ -24,6 +24,9 @@ Plug 'tpope/vim-sleuth'
 " Add ability to close buffer and keep window, :BD
 Plug 'vim-scripts/bufkill.vim'
 
+" Add undo tree exploration with :GundoToggle
+Plug 'sjl/gundo.vim'
+
 call plug#end()
 
 if has('gui_running')
@@ -109,6 +112,9 @@ nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
 " use clipboard as primary register for y,d,p
 set clipboard=unnamed
+
+" Add shortcut <leader>u for Gundo plugin
+nnoremap <leader>u :GundoToggle<CR>
 
 " easy access to register containing last yank (ignoring delete and replace)
 nnoremap <leader>p "0p
