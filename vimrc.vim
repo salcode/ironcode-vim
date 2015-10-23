@@ -30,6 +30,9 @@ Plug 'sjl/gundo.vim'
 " Look for ctags file in .git directory
 Plug 'tpope/vim-fugitive/'
 
+" Add syntax checking
+Plug 'scrooloose/syntastic'
+
 call plug#end()
 
 if has('gui_running')
@@ -98,6 +101,16 @@ set autoread
 
 " set leader to ,
 let mapleader = ","
+
+" Syntastic recommended default settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
