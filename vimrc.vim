@@ -75,6 +75,9 @@ set ignorecase
 " override ignorecase if the search pattern contains upper case characters
 set smartcase
 
+" treat `-` and `$` as part of the word, not boundaries
+set iskeyword+=-,$
+
 " highlight column 80 if supported
 if (exists('+colorcolumn'))
 	set colorcolumn=80
