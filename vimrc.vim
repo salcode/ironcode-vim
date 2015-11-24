@@ -112,6 +112,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Syntastic disabled file types
+let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
+
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
