@@ -30,6 +30,9 @@ Plug 'sjl/gundo.vim'
 " Look for ctags file in .git directory
 Plug 'tpope/vim-fugitive/'
 
+" Add common mappings
+Plug 'tpope/vim-unimpaired/'
+
 " Add syntax checking
 Plug 'scrooloose/syntastic'
 
@@ -131,12 +134,6 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
-
-" shortcuts for Buffer nagivation
-nnoremap ]b :bnext<CR>
-nnoremap ]B :blast<CR>
-nnoremap [b :bprev<CR>
-nnoremap [B :bfirst<CR>
 
 " map j to gj and k to gk, so line navigation ignores line wrap
 " http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
