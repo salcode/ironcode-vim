@@ -115,6 +115,17 @@ let g:syntastic_check_on_wq = 0
 " Syntastic disabled file types
 let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
 
+" Syntastic settings for phpcs and WordPress coding standards
+"
+" Run base PHP checker first, then run phpcs with WordPress standard
+" If phpcs does not exist or the standard does not exist,
+" Syntastic skips them (failing gracefully)
+let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_phpcs_args = '--standard=WordPress'
+
+" If phpcs.xml is found, it supercedes the standard set above
+let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
+
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
