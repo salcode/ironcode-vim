@@ -66,6 +66,16 @@ set number
 " display tabs as taking up 4 spaces
 set tabstop=4
 
+" set << and >> to move 4 columns
+set shiftwidth=4
+
+" use the tab character (not spaces)
+set noexpandtab
+
+" if this number were less than tabstop, pressing tab in insert mode
+" would insert a combination of the tab character and spaces
+set softtabstop=4
+
 " set font and font size for GUI
 set guifont=Monaco:h13
 
@@ -145,3 +155,16 @@ nnoremap <leader>u :GundoToggle<CR>
 
 " easy access to register containing last yank (ignoring delete and replace)
 nnoremap <leader>p "0p
+
+
+" Map `<leader>ts2` to set expand (t)abs to (s)paces with (2) characters indicating a tab
+nnoremap <leader>ts2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
+
+" Map `<leader>ts4` to set expand (t)abs to (s)paces with (4) characters indicating a tab
+nnoremap <leader>ts4 :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab<CR>
+
+" Map `<leader>tt2` to set (t)abs to be treated as (t)ab characters and display as (2) characters
+nnoremap <leader>tt2 :set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab<CR>
+
+" Map `<leader>tt4` to set (t)abs to be treated as (t)ab characters and display as (4) characters
+nnoremap <leader>tt4 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
