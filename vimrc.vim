@@ -136,6 +136,23 @@ let g:syntastic_php_phpcs_args = '--standard=WordPress'
 " If phpcs.xml is found, it supercedes the standard set above
 let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
 
+nnoremap <leader>cs :call FeSyntasticPhpcsToggle()<cr>
+
+" Toggle the presence of 'phpcs' in the list g:syntastic_php_checkers
+function! FeSyntasticPhpcsToggle()
+
+	let a:phpcsIndex = index( g:syntastic_php_checkers, 'phpcs' )
+
+	if -1 != a:phpcsIndex
+		call remove( g:syntastic_php_checkers, a:phpcsIndex )
+	else
+		let g:syntastic_php_checkers += ['phpcs']
+	endif
+
+	echo g:syntastic_php_checkers
+
+endfunction
+
 " shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
