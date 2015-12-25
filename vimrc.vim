@@ -18,9 +18,6 @@ Plug 'tpope/vim-commentary'
 " Add support for .editorconfig file in a project
 Plug 'editorconfig/editorconfig-vim'
 
-" Auto-detect indentation (size and type)
-Plug 'tpope/vim-sleuth'
-
 " Add ability to close buffer and keep window, :BD
 Plug 'vim-scripts/bufkill.vim'
 
