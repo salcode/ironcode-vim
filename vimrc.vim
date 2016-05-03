@@ -142,6 +142,10 @@ let g:BufKillVerbose = 0
 "     rather than the default 'confirm'
 let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
 
+" Close syntastic errors (i.e. location list) when buffer is deleted
+cabbrev bd lclose<bar>bd
+cabbrev BD lclose<bar>BD
+
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
 function! CodeStandardsMenu()
