@@ -11,6 +11,7 @@ Plug 'tpope/vim-vinegar'
 
 " Status line
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Comment toggling, trigger with `gcc`
 Plug 'tpope/vim-commentary'
