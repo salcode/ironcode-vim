@@ -136,20 +136,29 @@ let g:syntastic_php_phpcs_args = '--standard=WordPress'
 " If phpcs.xml is found, it supercedes the standard set above
 let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
 
-nnoremap <leader>cs :call FeSyntasticPhpcsToggle()<cr>
+nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
-" Toggle the presence of 'phpcs' in the list g:syntastic_php_checkers
-function! FeSyntasticPhpcsToggle()
+function! CodeStandardsMenu()
+	let l:myMakeTargets = ["abort", "Cancel", "WordPress", "PHP", "Laravel"]
+	let l:c = 0
+	let l:c = confirm("Code Standards ","&Cancel\n&WordPress\n&PHP\n&Laravel")
 
-	let a:phpcsIndex = index( g:syntastic_php_checkers, 'phpcs' )
+	if l:c == 2
+		let g:syntastic_php_checkers = ['php', 'phpcs']
+		let g:syntastic_php_phpcs_args = '--standard=WordPress'
+	endif
 
-	if -1 != a:phpcsIndex
-		call remove( g:syntastic_php_checkers, a:phpcsIndex )
-	else
-		let g:syntastic_php_checkers += ['phpcs']
+	if l:c == 3
+		let g:syntastic_php_checkers = ['php']
+	endif
+
+	if l:c == 4
+		let g:syntastic_php_checkers = ['php', 'phpcs']
+		let g:syntastic_php_phpcs_args = '--standard=PSR2'
 	endif
 
 	echo g:syntastic_php_checkers
+	echo g:syntastic_php_phpcs_args
 
 endfunction
 
