@@ -138,6 +138,9 @@ let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
 
 " BufKill remove verbose messages
 let g:BufKillVerbose = 0
+" BufKill when a buffer is displayed in multiple windows 'kill'
+"     rather than the default 'confirm'
+let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
 
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
