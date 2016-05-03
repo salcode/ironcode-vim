@@ -19,7 +19,7 @@ Plug 'tpope/vim-commentary'
 Plug 'editorconfig/editorconfig-vim'
 
 " Add ability to close buffer and keep window, :BD
-Plug 'vim-scripts/bufkill.vim'
+Plug 'qpkorr/vim-bufkill'
 
 " Add undo tree exploration with :GundoToggle
 Plug 'sjl/gundo.vim'
