@@ -10,7 +10,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-vinegar'
 
 " Status line
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " Comment toggling, trigger with `gcc`
 Plug 'tpope/vim-commentary'
