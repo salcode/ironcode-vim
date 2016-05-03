@@ -136,6 +136,9 @@ let g:syntastic_php_phpcs_args = '--standard=WordPress'
 " If phpcs.xml is found, it supercedes the standard set above
 let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
 
+" BufKill remove verbose messages
+let g:BufKillVerbose = 0
+
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
 function! CodeStandardsMenu()
