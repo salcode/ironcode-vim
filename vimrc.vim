@@ -143,9 +143,13 @@ let g:BufKillVerbose = 0
 "     rather than the default 'confirm'
 let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
 
-" Close syntastic errors (i.e. location list) when buffer is deleted
+" Close syntastic errors (i.e. location list) when buffer is deleted or a
+" split is opened
 cabbrev bd lclose<bar>bd
 cabbrev BD lclose<bar>BD
+cabbrev sp lclose<bar>sp
+cabbrev vs lclose<bar>vs
+cabbrev close lclose<bar>close
 
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
