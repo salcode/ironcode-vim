@@ -188,6 +188,9 @@ nnoremap <C-L> <C-W>l
 nnoremap <expr> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> j v:count == 0 ? 'gj' : 'j'
 
+" Skip the netrw buffer when using Ctrl-^
+let g:netrw_altfile = 1
+
 " use clipboard as primary register for y,d,p
 set clipboard=unnamed
 
