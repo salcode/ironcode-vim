@@ -48,6 +48,10 @@ Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
+if has('termguicolors')
+	set termguicolors
+endif
+
 syntax enable
 
 if has('gui_running')
