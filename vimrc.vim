@@ -54,6 +54,9 @@ endif
 
 syntax enable
 
+" Perform syntax highlighting the first 256 columns only.
+set synmaxcol=256
+
 if has('gui_running')
 	" Configure Solarized Color Scheme
 	set background=light
