@@ -48,9 +48,10 @@ Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
+syntax enable
+
 if has('gui_running')
 	" Configure Solarized Color Scheme
-	syntax enable
 	set background=light
 	colorscheme solarized
 endif
