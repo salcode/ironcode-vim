@@ -40,6 +40,9 @@ Plug 'tpope/vim-unimpaired/'
 " Add syntax checking
 Plug 'scrooloose/syntastic'
 
+" Vim / tmux sharing Ctrl-h/j/k/l for window / pane navigation
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 if has('gui_running')
@@ -186,12 +189,6 @@ function! CodeStandardsMenu()
 	echo g:syntastic_php_phpcs_args
 
 endfunction
-
-" shortcuts for window navigation Ctrl+h (left), Ctrl+j (down), etc.
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
 
 " map j to gj and k to gk, so line navigation ignores line wrap
 " http://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
