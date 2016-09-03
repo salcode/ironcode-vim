@@ -43,6 +43,9 @@ Plug 'scrooloose/syntastic'
 " Vim / tmux sharing Ctrl-h/j/k/l for window / pane navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" Alignment Plugin, visually select and then use (`ga=`) to align on `=`
+Plug 'junegunn/vim-easy-align'
+
 call plug#end()
 
 if has('gui_running')
@@ -219,3 +222,9 @@ nnoremap <leader>tt2 :set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab<CR>
 
 " Map `<leader>tt4` to set (t)abs to be treated as (t)ab characters and display as (4) characters
 nnoremap <leader>tt4 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
