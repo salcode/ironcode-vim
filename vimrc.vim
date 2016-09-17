@@ -46,6 +46,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Alignment Plugin, visually select and then use (`ga=`) to align on `=`
 Plug 'junegunn/vim-easy-align'
 
+" <leader>el on an variable creates an error log statement for it
+Plug 'salcode/vim-error-log-shortcut'
+
 call plug#end()
 
 if has('termguicolors')
