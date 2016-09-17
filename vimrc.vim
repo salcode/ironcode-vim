@@ -28,8 +28,8 @@ Plug 'editorconfig/editorconfig-vim'
 " Add ability to close buffer and keep window, :BD
 Plug 'qpkorr/vim-bufkill'
 
-" Add undo tree exploration with :GundoToggle
-Plug 'sjl/gundo.vim'
+" Add undo tree exploration with :UndotreeToggle
+Plug 'mbbill/undotree'
 
 " Look for ctags file in .git directory
 Plug 'tpope/vim-fugitive/'
@@ -215,8 +215,8 @@ let g:netrw_altfile = 1
 " use clipboard as primary register for y,d,p
 set clipboard=unnamed
 
-" Add shortcut <leader>u for Gundo plugin
-nnoremap <leader>u :GundoToggle<CR>
+" Add shortcut <leader>u for UndotreeToggle plugin
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " easy access to register containing last yank (ignoring delete and replace)
 nnoremap <leader>p "0p
