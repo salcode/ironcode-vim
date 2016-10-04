@@ -137,8 +137,8 @@ set noswapfile
 " if a file is changed outside Vim, automatically re-read it
 set autoread
 
-" set leader to ,
-let mapleader = ","
+" set leader to space key
+let mapleader = "\<Space>"
 
 " Syntastic recommended default settings
 set statusline+=%#warningmsg#
