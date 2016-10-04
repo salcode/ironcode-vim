@@ -242,3 +242,6 @@ nmap ga <Plug>(EasyAlign)
 
 " Highlight the current line
 set cursorline
+
+" ~ toggles ' and " in addition to its normal behaviour
+nnoremap <expr> ~ getline('.')[col('.')-1] == "'" ? "r\"l" : getline('.')[col('.')-1] == '"' ? "r'l" : '~'
