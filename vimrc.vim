@@ -234,6 +234,9 @@ nnoremap <leader>tt2 :set tabstop=2 softtabstop=2 shiftwidth=2 noexpandtab<CR>
 " Map `<leader>tt4` to set (t)abs to be treated as (t)ab characters and display as (4) characters
 nnoremap <leader>tt4 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
 
+" Map `<leader#>` to duplicate a line and comment out original one
+nnoremap <leader># YpkI//<Space><Esc>j^
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
