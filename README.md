@@ -70,4 +70,4 @@ You can automate the generation of Ctags. Tim Pope discusses generating Ctags ba
 
 Credits
 -------
-[@salcode](https://github.com/salcode), [@curtismchale](https://github.com/curtismchale/), [@mkoppmann](https://github.com/mkoppmann)
+[@salcode](https://github.com/salcode), [@curtismchale](https://github.com/curtismchale/), [@mkoppmann](https://github.com/mkoppmann), [@andrey-starodubtsev](https://github.com/andrey-starodubtsev)
