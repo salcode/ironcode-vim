@@ -40,6 +40,9 @@ Plug 'tpope/vim-unimpaired/'
 " Add syntax checking
 Plug 'scrooloose/syntastic'
 
+" xdebug support
+Plug 'joonty/vdebug'
+
 " Vim / tmux sharing Ctrl-h/j/k/l for window / pane navigation
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -248,3 +251,13 @@ set cursorline
 
 " ~ toggles ' and " in addition to its normal behaviour
 nnoremap <expr> ~ getline('.')[col('.')-1] == "'" ? "r\"l" : getline('.')[col('.')-1] == '"' ? "r'l" : '~'
+
+" joonty/vdebug options.
+if !exists('g:vdebug_options')
+	" this code avoids an error on vim startup about
+	" g:vdebug_options['path_maps'] being undefined
+	let g:vdebug_options = {}
+endif
+" This is the path map for xdebug for my VVV installation. Unfortunately, we
+" can't use ~ in the path.
+let g:vdebug_options['path_maps'] = {"/srv/www": "/Users/sal/vagrant-local/www"}
