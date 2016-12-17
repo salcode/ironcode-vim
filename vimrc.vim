@@ -240,6 +240,10 @@ nnoremap <leader>tt4 :set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab<CR>
 " Map `<leader#>` to duplicate a line and comment out original one
 nnoremap <leader># YpkI//<Space><Esc>j^
 
+" Map Alt+, and Alt+. to decrease or increase vertical splits
+nnoremap ≤ :vertical resize -5<CR>
+nnoremap ≥ :vertical resize +5<CR>
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
