@@ -162,7 +162,7 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
 " If phpcs does not exist or the standard does not exist,
 " Syntastic skips them (failing gracefully)
 let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_php_phpcs_args = '--standard=WordPress'
+let g:syntastic_php_phpcs_args = '--standard=WordPress-Core'
 
 " If phpcs.xml is found, it supercedes the standard set above
 let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
@@ -190,7 +190,7 @@ function! CodeStandardsMenu()
 
 	if l:c == 2
 		let g:syntastic_php_checkers = ['php', 'phpcs']
-		let g:syntastic_php_phpcs_args = '--standard=WordPress'
+		let g:syntastic_php_phpcs_args = '--standard=WordPress-Core'
 	endif
 
 	if l:c == 3
