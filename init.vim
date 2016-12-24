@@ -119,8 +119,12 @@ set ignorecase
 " override ignorecase if the search pattern contains upper case characters
 set smartcase
 
-" treat `-` and `$` as part of the word, not boundaries
-set iskeyword+=-,$
+" treat `$` as part of the word, not boundary
+set iskeyword+=$
+
+" treat `.`, `-`, and `#`  as part of the word in CSS and SCSS
+au Filetype css  setlocal iskeyword+=.,-,#
+au Filetype scss setlocal iskeyword+=.,-,#
 
 " highlight column 80 if supported
 if (exists('+colorcolumn'))
