@@ -15,7 +15,7 @@ From within Vim type `:BundleInstall!`
 
 Plugins and Detailed Settings
 -----------------------------
-Plugins and detailed settings are listed as comments within __vimrc.vim__
+Plugins and detailed settings are listed as comments within __init.vim__
 
 Detailed Installation
 ---------------------
