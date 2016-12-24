@@ -70,7 +70,7 @@ if has('gui_running')
 endif
 
 if has('nvim')
-	colorscheme badwolf
+	silent! colorscheme badwolf
 endif
 
 " Configure File Explorer to include line numbers
