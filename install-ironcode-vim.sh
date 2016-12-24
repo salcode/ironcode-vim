@@ -10,7 +10,8 @@ mv ~/.gvimrc ~/.gvimrc.bkup
 mv ~/.vimrc ~/.vimrc.bkup
 
 # create backup of .vim/ folder, overwrite if it exists
-mv -T ~/.vim ~/.vim.bkup
+rm -rf ~/.vim.bkup
+mv ~/.vim ~/.vim.bkup
 
 # link to config in ~/ironcode-vim/
 ln -sf ~/ironcode-vim/gvimrc.vim ~/.gvimrc
