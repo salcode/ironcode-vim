@@ -10,7 +10,7 @@ mv ~/.gvimrc ~/.gvimrc.bkup
 mv ~/.vimrc ~/.vimrc.bkup
 
 # note: if .vim-bkup exists, this puts .vim/ inside it
-mv ~/.vim ~/.vim-bkup
+mv ~/.vim ~/.vim.bkup
 
 # link to config in ~/ironcode-vim/
 ln -sf ~/ironcode-vim/gvimrc.vim ~/.gvimrc
