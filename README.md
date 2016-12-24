@@ -7,7 +7,10 @@ This project is a fork of [Curtis McHale](https://github.com/curtismchale)'s exc
 
 Lazy Installation
 -----------------
-From the command line run `bash <(curl "https://raw.githubusercontent.com/salcode/ironcode-vim/master/install-ironcode-vim.sh")`
+From the command line run
+```
+bash <(curl "https://raw.githubusercontent.com/salcode/ironcode-vim/master/install-ironcode-vim.sh")
+```
 
 Updating Plugins
 ----------------
