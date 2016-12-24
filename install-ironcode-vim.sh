@@ -9,8 +9,8 @@ git clone https://github.com/salcode/ironcode-vim.git ~/ironcode-vim
 mv ~/.gvimrc ~/.gvimrc.bkup
 mv ~/.vimrc ~/.vimrc.bkup
 
-# note: if .vim-bkup exists, this puts .vim/ inside it
-mv ~/.vim ~/.vim.bkup
+# create backup of .vim/ folder, overwrite if it exists
+mv -T ~/.vim ~/.vim.bkup
 
 # link to config in ~/ironcode-vim/
 ln -sf ~/ironcode-vim/gvimrc.vim ~/.gvimrc
