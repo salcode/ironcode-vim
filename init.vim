@@ -119,8 +119,9 @@ set ignorecase
 " override ignorecase if the search pattern contains upper case characters
 set smartcase
 
-" treat `$` as part of the word, not boundary
-set iskeyword+=$
+" treat `$` as part of the word in PHP and JavaScript
+au Filetype php        setlocal iskeyword+=$
+au Filetype javascript setlocal iskeyword+=$
 
 " treat `.`, `-`, and `#`  as part of the word in CSS and SCSS
 au Filetype css  setlocal iskeyword+=.,-,#
