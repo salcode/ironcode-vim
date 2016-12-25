@@ -1,7 +1,7 @@
 Iron Code Vim Configuration
 ===========================
 
-A Vim Configuration focused on WordPress development and predominantly used on a Mac with [MacVim](https://code.google.com/p/macvim/)
+A Vim Configuration focused on WordPress development and predominantly used on a Mac with [Neovim](https://neovim.io/)
 
 This project is a fork of [Curtis McHale](https://github.com/curtismchale)'s excellent [WPTT Vim Config](https://github.com/curtismchale/WPTT-Vim-Config)
 
