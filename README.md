@@ -30,8 +30,7 @@ git clone https://github.com/salcode/ironcode-vim.git
 This will
 - copy your current Vim configuration to `.gvimrc.bkup`, `.vimrc.bkup`, and `.vim.bkup/`
 - create symbolic links to the `/ironcode-vim` configuration files
-- clone the vundle package manager via git
-- run vim and trigger an install of all plugins defined for vundle
+- run vim and trigger an install of all plugins defined for [Vim Plug](https://github.com/junegunn/vim-plug)
 
 Recommended Utilities
 ---------------------
