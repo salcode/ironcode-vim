@@ -14,7 +14,6 @@ rm -rf ~/.vim.bkup
 mv ~/.vim ~/.vim.bkup
 
 # link to config in ~/ironcode-vim/
-ln -sf ~/ironcode-vim/gvimrc.vim ~/.gvimrc
 ln -sf ~/ironcode-vim/init.vim ~/.vimrc
 ln -sfh ~/ironcode-vim ~/.vim
 
