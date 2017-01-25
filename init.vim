@@ -52,6 +52,9 @@ Plug 'junegunn/vim-easy-align'
 " <leader>el on an variable creates an error log statement for it
 Plug 'salcode/vim-error-log-shortcut'
 
+" Load dictionaries with WordPress terms
+Plug 'salcode/vim-wordpress-dict'
+
 call plug#end()
 
 if has('termguicolors')
