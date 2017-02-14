@@ -40,6 +40,9 @@ Plug 'salcode/vim-wordpress-dict'
 " Add common mappings
 Plug 'tpope/vim-unimpaired/'
 
+" Automatically record session on exit
+Plug 'tpope/vim-obsession/'
+
 " Add syntax checking
 Plug 'scrooloose/syntastic'
 
