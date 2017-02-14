@@ -34,6 +34,9 @@ Plug 'mbbill/undotree'
 " Look for ctags file in .git directory
 Plug 'tpope/vim-fugitive/'
 
+" Add WordPress dictionary and syntax to PHP files
+Plug 'salcode/vim-wordpress-dict'
+
 " Add common mappings
 Plug 'tpope/vim-unimpaired/'
 
