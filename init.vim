@@ -128,13 +128,16 @@ set ignorecase
 " override ignorecase if the search pattern contains upper case characters
 set smartcase
 
+" add `-` as part of the word in all situations
+set iskeyword+=-
+
 " treat `$` as part of the word in PHP and JavaScript
 au Filetype php        setlocal iskeyword+=$
 au Filetype javascript setlocal iskeyword+=$
 
-" treat `.`, `-`, and `#`  as part of the word in CSS and SCSS
-au Filetype css  setlocal iskeyword+=.,-,#
-au Filetype scss setlocal iskeyword+=.,-,#
+" treat `.`, and `#`  as part of the word in CSS and SCSS
+au Filetype css  setlocal iskeyword+=.,#
+au Filetype scss setlocal iskeyword+=.,#
 
 " highlight column 80 if supported
 if (exists('+colorcolumn'))
