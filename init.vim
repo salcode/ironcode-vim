@@ -97,6 +97,12 @@ augroup fe_commentary_php_commentstring
 	autocmd FileType php setlocal commentstring=//\ %s
 augroup END
 
+" Configure Folding Method to go from brace to brace in PHP
+augroup fe_folding_php
+	autocmd!
+	autocmd FileType php setlocal foldmarker={,} foldmethod=marker foldlevelstart=1
+augroup END
+
 " show invisible characters
 set list
 
