@@ -153,6 +153,13 @@ set noswapfile
 
 " if a file is changed outside Vim, automatically re-read it
 set autoread
+" polyfill for neovim and autoread
+if has('nvim')
+	augroup fe_autoread_behavior_neovim
+		autocmd!
+		autocmd FocusGained * silent! checktime
+	augroup END
+endif
 
 " set leader to space key
 let mapleader = "\<Space>"
