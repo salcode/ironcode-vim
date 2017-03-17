@@ -291,3 +291,9 @@ endif
 " This is the path map for xdebug for my VVV installation. Unfortunately, we
 " can't use ~ in the path.
 let g:vdebug_options['path_maps'] = {"/srv/www": "/Users/sal/vagrant-local/www"}
+
+" Source $MYVIMRC when it is saved.
+augroup VimReload
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
