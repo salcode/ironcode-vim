@@ -44,7 +44,7 @@ Plug 'tpope/vim-unimpaired/'
 Plug 'tpope/vim-obsession/'
 
 " Add syntax checking
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 
 " xdebug support
 Plug 'joonty/vdebug'
@@ -173,45 +173,25 @@ endif
 " set leader to space key
 let mapleader = "\<Space>"
 
-" Syntastic recommended default settings
-set statusline+=%#warningmsg#
-if exists("*SyntasticStatuslineFlag")
-	set statusline+=%{SyntasticStatuslineFlag()}
-endif
-set statusline+=%*
+" ALE Linter / Code Sniffing / Syntax Checker
+let g:ale_php_phpcs_standard = 'WordPress'
+let g:ale_linters = {
+\   'php': ['phpcs'],
+\}
+" only run on save
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+" You can disable this option too
+" if you don't want linters to run on opening a file
+" let g:ale_lint_on_enter = 0
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Syntastic disabled file types
-let g:syntastic_mode_map = { 'passive_filetypes': ['scss'] }
-
-" Syntastic settings for phpcs and WordPress coding standards
-"
-" Run base PHP checker first, then run phpcs with WordPress standard
-" If phpcs does not exist or the standard does not exist,
-" Syntastic skips them (failing gracefully)
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_php_phpcs_args = '--standard=WordPress-Core'
-
-" If phpcs.xml is found, it supercedes the standard set above
-let g:syntastic_php_phpcs_standard_file = "phpcs.xml"
+highlight clear ALEErrorSign
 
 " BufKill remove verbose messages
 let g:BufKillVerbose = 0
 " BufKill when a buffer is displayed in multiple windows 'kill'
 "     rather than the default 'confirm'
 let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
-
-" Close syntastic errors (i.e. location list) when buffer is deleted or a
-" split is opened
-cabbrev bd lclose<bar>bd
-cabbrev BD lclose<bar>BD
-cabbrev sp lclose<bar>sp
-cabbrev vs lclose<bar>vs
-cabbrev close lclose<bar>close
 
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
@@ -221,21 +201,28 @@ function! CodeStandardsMenu()
 	let l:c = confirm("Code Standards ","&Cancel\n&WordPress\n&PHP\n&Laravel")
 
 	if l:c == 2
-		let g:syntastic_php_checkers = ['php', 'phpcs']
-		let g:syntastic_php_phpcs_args = '--standard=WordPress-Core'
+
+		let g:ale_php_phpcs_standard = 'WordPress'
+		let g:ale_linters = {
+		\   'php': ['php', 'phpcs'],
+		\}
 	endif
 
 	if l:c == 3
-		let g:syntastic_php_checkers = ['php']
+		let g:ale_linters = {
+		\   'php': ['php'],
+		\}
 	endif
 
 	if l:c == 4
-		let g:syntastic_php_checkers = ['php', 'phpcs']
-		let g:syntastic_php_phpcs_args = '--standard=PSR2'
+		let g:ale_php_phpcs_standard = 'PSR2'
+		let g:ale_linters = {
+		\   'php': ['php', 'phpcs'],
+		\}
 	endif
 
-	echo g:syntastic_php_checkers
-	echo g:syntastic_php_phpcs_args
+	echo g:ale_linters
+	echo g:ale_php_phpcs_standard
 
 endfunction
 
