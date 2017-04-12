@@ -96,6 +96,20 @@ Ctags are an index of your project.
 ### Automate Ctag Generation
 You can automate the generation of Ctags. Tim Pope discusses generating Ctags based on Git hooks in his post [Effortless Ctags with Git](http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html).  This behavior is integrated in another project of mine, [Iron Code Studio Git Enhancements](https://github.com/ironcodestudio/ironcode-git-enhancements).
 
+PHP Docblock Generation
+-----------------------
+
+Place the cursor on the beginning of one of the following definition lines:
+
+- class
+- constant
+- attribute
+- function (method)
+- interface
+- trait
+
+Then in normal mode type `<leader>db`, this will generate a template for the php docblock.
+
 Credits
 -------
 [@salcode](https://github.com/salcode), [@curtismchale](https://github.com/curtismchale/), [@mkoppmann](https://github.com/mkoppmann), [@andrey-starodubtsev](https://github.com/andrey-starodubtsev)

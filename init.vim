@@ -49,6 +49,10 @@ Plug 'w0rp/ale'
 " xdebug support
 Plug 'joonty/vdebug'
 
+" Add PHP docblock generator.
+Plug 'tobyS/pdv'
+Plug 'tobyS/vmustache' " Dependency of pdv
+
 " Vim / tmux sharing Ctrl-h/j/k/l for window / pane navigation
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -284,6 +288,10 @@ endif
 " This is the path map for xdebug for my VVV installation. Unfortunately, we
 " can't use ~ in the path.
 let g:vdebug_options['path_maps'] = {"/srv/www": "/Users/sal/vagrant-local/www"}
+
+" Set PDV template dir to default pdv templates.
+let g:pdv_template_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h:h') . '/ironcode-vim/plugged/pdv/templates'
+nnoremap <buffer> <leader>db :call pdv#DocumentCurrentLine()<cr>
 
 " Source $MYVIMRC when it is saved.
 augroup VimReload
