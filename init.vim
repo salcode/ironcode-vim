@@ -267,6 +267,11 @@ nnoremap <leader># YpkI//<Space><Esc>j^
 nnoremap ≤ :vertical resize -5<CR>
 nnoremap ≥ :vertical resize +5<CR>
 
+" Map captilization typo commands to original commands
+command! -bang -nargs=? -complete=file W w<bang> <args>
+command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
