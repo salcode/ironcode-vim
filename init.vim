@@ -298,3 +298,10 @@ augroup VimReload
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
+
+" Monkey C (m4) support - for Garmin embedded device programming
+" https://developer.garmin.com/downloads/connect-iq/monkey-c/doc/
+augroup FeM4Comments
+    autocmd!
+	autocmd FileType m4 setlocal commentstring=//\ %s
+augroup END
