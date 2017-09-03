@@ -200,9 +200,9 @@ let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
 function! CodeStandardsMenu()
-	let l:myMakeTargets = ["abort", "Cancel", "WordPress", "PHP", "Laravel"]
+	let l:myMakeTargets = ["abort", "Cancel", "WordPress", "PEAR", "PSR2"]
 	let l:c = 0
-	let l:c = confirm("Code Standards ","&Cancel\n&WordPress\n&PHP\n&Laravel")
+	let l:c = confirm("Code Standards ","&Cancel\n&WordPress\n&PEAR\nPSR&2")
 
 	if l:c == 2
 
