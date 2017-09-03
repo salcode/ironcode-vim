@@ -247,6 +247,10 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " easy access to register containing last yank (ignoring delete and replace)
 nnoremap <leader>p "0p
 
+" Map X as delete to the black hole registry. Issue #112.
+nnoremap X "_d
+nnoremap XX "_dd
+vnoremap X "_d
 
 " Map `<leader>ts2` to set expand (t)abs to (s)paces with (2) characters indicating a tab
 nnoremap <leader>ts2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
