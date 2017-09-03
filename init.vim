@@ -191,6 +191,10 @@ let g:ale_lint_on_text_changed = 0
 
 highlight clear ALEErrorSign
 
+" ALE Linter shortcuts [w, ]w for prev/next error mapping.
+nmap <silent> ]w <Plug>(ale_next_wrap)
+nmap <silent> [w <Plug>(ale_previous_wrap)
+
 " BufKill remove verbose messages
 let g:BufKillVerbose = 0
 " BufKill when a buffer is displayed in multiple windows 'kill'
