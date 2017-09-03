@@ -252,6 +252,10 @@ nnoremap X "_d
 nnoremap XX "_dd
 vnoremap X "_d
 
+" Center next/prev match on screen when using n/N. Issue #110.
+noremap n nzz
+noremap N Nzz
+
 " Map `<leader>ts2` to set expand (t)abs to (s)paces with (2) characters indicating a tab
 nnoremap <leader>ts2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 
