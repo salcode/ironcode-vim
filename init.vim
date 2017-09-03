@@ -256,6 +256,9 @@ vnoremap X "_d
 noremap n nzz
 noremap N Nzz
 
+" Select last paste with gb. Issue #109.
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+
 " Map `<leader>ts2` to set expand (t)abs to (s)paces with (2) characters indicating a tab
 nnoremap <leader>ts2 :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab<CR>
 
