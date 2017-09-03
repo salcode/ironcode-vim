@@ -314,3 +314,11 @@ augroup FeM4Comments
     autocmd!
 	autocmd FileType m4 setlocal commentstring=//\ %s
 augroup END
+
+" Disable beep in MacVim. Issue #111.
+if has("gui_macvim")
+	augroup FeMacVim
+		autocmd!
+		autocmd GUIEnter * set vb t_vb=
+	augroup END
+endif
