@@ -287,6 +287,14 @@ command! -bang -nargs=? -complete=file W w<bang> <args>
 command! -bang -nargs=? -complete=file Wq wq<bang> <args>
 command! -bang -nargs=? -complete=file WQ wq<bang> <args>
 
+" EasyAlign Custom Rules
+" See https://github.com/junegunn/vim-easy-align#extending-alignment-rules
+let g:easy_align_delimiters = {
+\ '/': {
+\     'pattern':         '//\+\|/\*\|\*/',
+\     'delimiter_align': 'l',
+\     'ignore_groups':   ['!Comment'] },
+\ }
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
