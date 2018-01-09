@@ -341,3 +341,23 @@ if has("gui_macvim")
 		autocmd GUIEnter * set vb t_vb=
 	augroup END
 endif
+
+" Map <tab> in insert mode to
+" - insert <tab> when expandtab (which Vim will expand to spaces)
+" - call our function when noexpandtab (i.e. \t is being used)
+inoremap <expr> <tab> &expandtab ? "\<tab>" : '<C-R>=FeNoExpandTabIndentOnly()<CR>'
+
+function! FeNoExpandTabIndentOnly() abort
+	let l:aTabsWorthOfSpaces   = repeat(' ', &tabstop)
+	let l:rowContent           = getline('.')
+	let l:colPos               = col('.')
+	let l:rowContentUpToColPos = strpart( l:rowContent, 0, l:colPos - 1)
+
+	if l:rowContentUpToColPos =~ '\S'
+		" The content before the cursor contains a non-whitespace character.
+		return l:aTabsWorthOfSpaces
+	else
+		" The content before the cursor is exclusively whitespace characters.
+		return "\t"
+	endif
+endfunction
