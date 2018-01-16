@@ -141,8 +141,7 @@ set smartcase
 " add `-` as part of the word in all situations
 set iskeyword+=-
 
-" treat `$` as part of the word in PHP and JavaScript
-au Filetype php        setlocal iskeyword+=$
+" treat `$` as part of the word in JavaScript
 au Filetype javascript setlocal iskeyword+=$
 
 " treat `.`, and `#`  as part of the word in CSS and SCSS
@@ -319,7 +318,6 @@ let g:vdebug_options['path_maps'] = {"/srv/www": "/Users/sal/vagrant-local/www"}
 
 " Set PDV template dir to default pdv templates.
 let g:pdv_template_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h:h') . '/ironcode-vim/plugged/pdv/templates'
-nnoremap <buffer> <leader>db :call pdv#DocumentCurrentLine()<cr>
 
 " Source $MYVIMRC when it is saved.
 augroup VimReload
