@@ -337,6 +337,10 @@ endif
 vnoremap * y/<C-R>"<CR>
 vnoremap ? y?<C-R>"<CR>
 
+" J or K moves visual block down (or up).
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Re-select visual block after indenting.
 vnoremap < <gv
 vnoremap > >gv
