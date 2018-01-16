@@ -333,6 +333,10 @@ if has("gui_macvim")
 	augroup END
 endif
 
+" In visual mode, when * (or ?) is pressed search for selected text.
+vnoremap * y/<C-R>"<CR>
+vnoremap ? y?<C-R>"<CR>
+
 " Map <tab> in insert mode to
 " - insert <tab> when expandtab (which Vim will expand to spaces)
 " - call our function when noexpandtab (i.e. \t is being used)
