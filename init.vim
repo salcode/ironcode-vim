@@ -141,9 +141,6 @@ set smartcase
 " add `-` as part of the word in all situations
 set iskeyword+=-
 
-" treat `$` as part of the word in JavaScript
-au Filetype javascript setlocal iskeyword+=$
-
 " treat `.`, and `#`  as part of the word in CSS and SCSS
 au Filetype css  setlocal iskeyword+=.,#
 au Filetype scss setlocal iskeyword+=.,#
