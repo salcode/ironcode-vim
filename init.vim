@@ -282,6 +282,8 @@ command! -bang -nargs=? -complete=file WQ wq<bang> <args>
 " EasyAlign Custom Rules
 " See https://github.com/junegunn/vim-easy-align#extending-alignment-rules
 let g:easy_align_delimiters = {
+\ '\': {
+\     'pattern':         '\\' },
 \ '/': {
 \     'pattern':         '//\+\|/\*\|\*/',
 \     'delimiter_align': 'l',
