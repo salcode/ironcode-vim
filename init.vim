@@ -110,8 +110,8 @@ augroup END
 " show invisible characters
 set list
 
-" show line numbers
-set number
+" show absolute line number on current line, relative line number on all others
+set number relativenumber
 
 " display tabs as taking up 4 spaces
 set tabstop=4
