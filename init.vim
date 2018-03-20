@@ -141,6 +141,9 @@ set smartcase
 " add `-` as part of the word in all situations
 set iskeyword+=-
 
+" Start diff mode with vertical splits (used for Fugitive's Gdiff)
+set diffopt=vertical
+
 " highlight column 80 if supported
 if (exists('+colorcolumn'))
 	set colorcolumn=80
