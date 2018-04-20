@@ -25,9 +25,6 @@ Plug 'tpope/vim-commentary'
 " Add support for .editorconfig file in a project
 Plug 'editorconfig/editorconfig-vim'
 
-" Add ability to close buffer and keep window, :BD
-Plug 'qpkorr/vim-bufkill'
-
 " Add undo tree exploration with :UndotreeToggle
 Plug 'mbbill/undotree'
 
@@ -190,12 +187,6 @@ highlight clear ALEErrorSign
 nmap <silent> ]w <Plug>(ale_next_wrap)
 nmap <silent> [w <Plug>(ale_previous_wrap)
 
-" BufKill remove verbose messages
-let g:BufKillVerbose = 0
-" BufKill when a buffer is displayed in multiple windows 'kill'
-"     rather than the default 'confirm'
-let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
-
 nnoremap <leader>cs :call CodeStandardsMenu()<cr>
 
 function! CodeStandardsMenu()
@@ -349,6 +340,44 @@ vnoremap K :m '<-2<CR>gv=gv
 " Re-select visual block after indenting.
 vnoremap < <gv
 vnoremap > >gv
+
+" :BD and :BD! call BufDeleteKeepSplit(0) and BufDeleteKeepSplit(1) respectively
+command! -bang BD call BufDeleteKeepSplit(<bang>0)
+
+" Close buffer while keeping the split open.
+" @param bang Is a 0 or 1 indicating if the command ended with a bang (!).
+"     i.e. close the buffer even if it is modified.
+function! BufDeleteKeepSplit(bang) abort
+	" Get current buffer's number. See :help bufnr
+	" :help bufname explains '%' is the current buffer
+	let buffer_to_close_number = bufnr('%')
+
+	" Check if the buffer is modified since last save.
+	" AND bang parameter is zero.
+	" When bang parameter is zero, we do not close the buffer.
+	" See :help getbufvar
+	" See :help modified
+	" Note: '&mod' works in place of '&modified'
+	if getbufvar(buffer_to_close_number, '&modified') && ! a:bang
+		echohl ErrorMsg
+		echo "No write since last change (add ! to override)"
+		echohl None
+		return
+	endif
+
+	" Since we checked for modified buffers above, we can use the
+	" bang versions of these commands to ignore if a buffer is modified.
+	" See :help bprevious
+	execute "bprevious!"
+
+	" Check if the 'buffer to close' is a listed buffer.
+	" bdelete makes a buffer unlisted so we can not call it on an already
+	" unlisted buffer.  See :help unlisted-buffer
+	if buflisted(buffer_to_close_number)
+		execute "bdelete! " . buffer_to_close_number
+	endif
+
+endfunction
 
 " Map <tab> in insert mode to
 " - insert <tab> when expandtab (which Vim will expand to spaces)
