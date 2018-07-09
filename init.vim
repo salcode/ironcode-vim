@@ -170,7 +170,6 @@ endif
 let mapleader = "\<Space>"
 
 " ALE Linter / Code Sniffing / Syntax Checker
-let g:ale_php_phpcs_standard = 'WordPress'
 let g:ale_linters = {
 \   'php': ['phpcs'],
 \}
