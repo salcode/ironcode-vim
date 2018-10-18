@@ -31,6 +31,9 @@ Plug 'mbbill/undotree'
 " Look for ctags file in .git directory
 Plug 'tpope/vim-fugitive/'
 
+" Add PHP.net docs with SHIFT+k overkeyword key binding.
+Plug 'alvan/vim-php-manual'
+
 " Add WordPress dictionary and syntax to PHP files
 Plug 'salcode/vim-wordpress-dict'
 
