@@ -33,6 +33,8 @@ Plug 'tpope/vim-fugitive/'
 
 " Add PHP.net docs with SHIFT+k overkeyword key binding.
 Plug 'alvan/vim-php-manual'
+" Prevent mapping Ctrl+h to open the manual page in PHP.net
+let g:php_manual_online_search_shortcut = ''
 
 " Add WordPress dictionary and syntax to PHP files
 Plug 'salcode/vim-wordpress-dict'
