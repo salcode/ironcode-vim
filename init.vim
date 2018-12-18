@@ -48,9 +48,6 @@ Plug 'tpope/vim-obsession/'
 " Add syntax checking
 Plug 'w0rp/ale'
 
-" xdebug support
-Plug 'joonty/vdebug'
-
 " Add PHP docblock generator.
 Plug 'tobyS/pdv'
 Plug 'tobyS/vmustache' " Dependency of pdv
@@ -298,16 +295,6 @@ set cursorline
 
 " ~ toggles ' and " in addition to its normal behaviour
 nnoremap <expr> ~ getline('.')[col('.')-1] == "'" ? "r\"l" : getline('.')[col('.')-1] == '"' ? "r'l" : '~'
-
-" joonty/vdebug options.
-if !exists('g:vdebug_options')
-	" this code avoids an error on vim startup about
-	" g:vdebug_options['path_maps'] being undefined
-	let g:vdebug_options = {}
-endif
-" This is the path map for xdebug for my VVV installation. Unfortunately, we
-" can't use ~ in the path.
-let g:vdebug_options['path_maps'] = {"/srv/www": "/Users/sal/vagrant-local/www"}
 
 " Set PDV template dir to default pdv templates.
 let g:pdv_template_dir = fnamemodify(resolve(expand('<sfile>:p')), ':h:h') . '/ironcode-vim/plugged/pdv/templates'
