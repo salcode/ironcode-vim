@@ -84,9 +84,12 @@ if has('gui_running')
 	colorscheme solarized
 endif
 
-if has('nvim')
-	silent! colorscheme badwolf
-endif
+" Correct color display in Vim in Tmux
+" See https://salferrarello.com/vim-tmux-iterm-broken-colors/
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+colorscheme badwolf
 
 " Configure File Explorer to include line numbers
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
