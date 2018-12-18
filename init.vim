@@ -1,5 +1,8 @@
 call plug#begin()
 
+" Reverse the order of commits in a git interactive rebase
+Plug 'salcode/vim-interactive-rebase-reverse'
+
 " Sensible Vim Defaults
 Plug 'tpope/vim-sensible'
 
