@@ -48,6 +48,9 @@ Plug 'tpope/vim-unimpaired/'
 " Automatically record session on exit
 Plug 'tpope/vim-obsession/'
 
+" Add syntax highlighting / indentation pack
+Plug 'sheerun/vim-polyglot'
+
 " Add syntax checking
 Plug 'w0rp/ale'
 
