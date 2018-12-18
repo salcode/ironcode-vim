@@ -178,11 +178,11 @@ let mapleader = "\<Space>"
 let g:ale_linters = {
 \   'php': ['phpcs'],
 \}
-" only run on save
+" Run ALE Linter on save (only).
 let g:ale_lint_on_save = 1
+" Do NOT run ALE Linter when text is changed but not saved.
 let g:ale_lint_on_text_changed = 0
-" You can disable this option too
-" if you don't want linters to run on opening a file
+" Do NOT run ALE Linter when a file is opened.
 let g:ale_lint_on_enter = 0
 
 highlight clear ALEErrorSign
