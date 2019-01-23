@@ -395,3 +395,9 @@ function! FeNoExpandTabIndentOnly() abort
 		return "\t"
 	endif
 endfunction
+
+augroup fe_mkview_loadview
+	autocmd!
+	autocmd BufWinLeave *.* mkview
+	autocmd BufWinEnter *.* silent loadview
+augroup END
