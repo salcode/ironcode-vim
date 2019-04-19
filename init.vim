@@ -449,3 +449,59 @@ let g:vdebug_options= {
 \    "marker_closed_tree" : '▸',
 \    "marker_open_tree" : '▾'
 \}
+
+" Look for a project specific vdebug path maps file in the current directory.
+" If the file is present, use the first line as the 'local path'.
+" If the file has a second line, use the second line as the 'remote path'.
+"
+" Example .vdebug_path_maps
+" /Users/sal/localsites/mysite/app/public
+" /app/public/
+"
+" To load the project specific vdebug path maps, the file must be in the
+" current directory when Vim/Neovim is launched.
+function! FeLocalVDebugPathMaps(filename)
+	if ! filereadable(a:filename)
+		" Exit early, unable to read project vdebug path maps file."
+		return
+	endif
+	if ! exists("g:vdebug_options")
+		" Exit early g:vdebug_options does not exist.
+		return
+	endif
+	if has_key(g:vdebug_options, 'path_maps')
+		" g:vdebug_options['path_maps'] exists, store original
+		" values to use as defaults.
+		let l:remote_path = keys(g:vdebug_options['path_maps'])[0]
+		let l:local_path  = values(g:vdebug_options['path_maps'])[0]
+	else
+		" We default the local path to the system root directory.
+		" This value is unlikely to work but the hope is this will be
+		" overwritten by the project vdebug path maps file.
+		let l:remote_path  = '/'
+	endif
+
+	let l:project_vdebug_settings = readfile(a:filename)
+	if ! len(l:project_vdebug_settings)
+		" Exit early, the project vdebug path maps file does
+		" not have any information.
+		return
+	endif
+
+	" Update the local_path with the value from the project vdebug
+	" path maps file.
+	let l:local_path = l:project_vdebug_settings[0]
+
+	if 2 == len(l:project_vdebug_settings)
+		" Update the remote_path with the value from the project vdebug
+		" path maps file.
+		let l:remote_path = l:project_vdebug_settings[1]
+	endif
+
+	" Update vdebug_options['path_maps'] with the new value(s).
+	let g:vdebug_options["path_maps"] = {l:remote_path: l:local_path}
+endf
+
+" Attempt to load a project specific vdebug path map file from the
+" current directory.
+exe "call FeLocalVDebugPathMaps('.vdebug_path_maps')"
