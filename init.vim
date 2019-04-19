@@ -274,6 +274,9 @@ nnoremap <leader># YpkI//<Space><Esc>j^
 " Map Alt+, and Alt+. to decrease or increase vertical splits
 nnoremap ≤ :vertical resize -5<CR>
 nnoremap ≥ :vertical resize +5<CR>
+" Map Alt+a and Alt+x. to increase and decrease vertical splits respectively
+nnoremap ≈ :vertical resize -5<CR>
+nnoremap å :vertical resize +5<CR>
 
 " Map captilization typo commands to original commands
 command! -bang -nargs=? -complete=file W w<bang> <args>
