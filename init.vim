@@ -398,3 +398,16 @@ function! FeNoExpandTabIndentOnly() abort
 		return "\t"
 	endif
 endfunction
+
+" Add :Ag command, which behaves like :grep but uses
+" the ag command instead of grep
+function! FeAg(func)
+  let tmp1=&grepprg
+  let tmp2=&grepformat
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+  exe "grep ".a:func
+  exe "set grepprg=".escape(tmp1,' ')
+  exe "set grepformat=".escape(tmp2, ' ')
+endf
+command! -nargs=* Ag :silent call FeAg("<args>")
