@@ -344,6 +344,9 @@ vnoremap K :m '<-2<CR>gv=gv
 vnoremap < <gv
 vnoremap > >gv
 
+" <leader>c to create a copy of the current file in the same directory.
+nnoremap <silent> <Leader>c :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.%:e'"<bar>redraw<bar>echo "Copied " . expand('%:t') . ' to ' . expand('%:t:r') . '-copy.' . expand('%:e')<cr>
+
 " :BD and :BD! call BufDeleteKeepSplit(0) and BufDeleteKeepSplit(1) respectively
 command! -bang BD call BufDeleteKeepSplit(<bang>0)
 
