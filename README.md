@@ -70,6 +70,12 @@ Ctags are an index of your project.
 ### Automate Ctag Generation
 You can automate the generation of Ctags. Tim Pope discusses generating Ctags based on Git hooks in his post [Effortless Ctags with Git](http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html).  This behavior is integrated in another project of mine, [Iron Code Studio Git Enhancements](https://github.com/ironcodestudio/ironcode-git-enhancements).
 
+Git in Vim
+----------
+
+- `<leader>gm` will display the commit for the current line (see [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim) for further features)
+- `:Gblame` will display git blame information alongside the file (see [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive))
+
 PHP Docblock Generation
 -----------------------
 

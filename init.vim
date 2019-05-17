@@ -31,6 +31,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Add undo tree exploration with :UndotreeToggle
 Plug 'mbbill/undotree'
 
+" View git commit for current line with <leader>gm (:GitMessenger)
+Plug 'rhysd/git-messenger.vim'
+
 " Look for ctags file in .git directory
 Plug 'tpope/vim-fugitive/'
 
