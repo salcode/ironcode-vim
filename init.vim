@@ -350,6 +350,9 @@ nnoremap <silent> <Leader>c :clear<bar>silent exec "!cp '%:p' '%:p:h/%:t:r-copy.
 " :BD and :BD! call BufDeleteKeepSplit(0) and BufDeleteKeepSplit(1) respectively
 command! -bang BD call BufDeleteKeepSplit(<bang>0)
 
+" :BufOnly closes all buffers except the current one
+command! BufOnly execute '%bdelete|edit #|normal `"'
+
 " Close buffer while keeping the split open.
 " @param bang Is a 0 or 1 indicating if the command ended with a bang (!).
 "     i.e. close the buffer even if it is modified.
