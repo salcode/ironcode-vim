@@ -289,6 +289,11 @@ command! -bang -nargs=? -complete=file WQ wq<bang> <args>
 " EasyAlign Custom Rules
 " See https://github.com/junegunn/vim-easy-align#extending-alignment-rules
 let g:easy_align_delimiters = {
+\ '$': {
+\      'pattern':       '$\+',
+\      'right_margin':  0,
+\      'stick_to_left': 0,
+\      'ignore_groups': ['!Comment']  },
 \ '\': {
 \     'pattern':         '\\' },
 \ '/': {
