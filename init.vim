@@ -31,6 +31,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Add undo tree exploration with :UndotreeToggle
 Plug 'mbbill/undotree'
 
+" Improve PHP folding.
+Plug 'rayburgemeestre/phpfolding.vim'
+
 " View git commit for current line with <leader>gm (:GitMessenger)
 Plug 'rhysd/git-messenger.vim'
 
@@ -107,12 +110,6 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 augroup fe_commentary_php_commentstring
 	autocmd!
 	autocmd FileType php setlocal commentstring=//\ %s
-augroup END
-
-" Configure Folding Method to go from brace to brace in PHP
-augroup fe_folding_php
-	autocmd!
-	autocmd FileType php setlocal foldmarker={,} foldmethod=marker foldlevelstart=1
 augroup END
 
 " show invisible characters
