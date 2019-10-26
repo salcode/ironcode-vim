@@ -52,7 +52,7 @@ Plug 'tpope/vim-unimpaired/'
 Plug 'tpope/vim-obsession/'
 
 " Add syntax checking
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " Add PHP docblock generator.
 Plug 'tobyS/pdv'
