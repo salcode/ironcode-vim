@@ -361,6 +361,9 @@ command! -bang BD call BufDeleteKeepSplit(<bang>0)
 " :BufOnly closes all buffers except the current one
 command! BufOnly execute '%bdelete|edit #|normal `"'
 
+" :JSONFormat custom command to format for a given range (or current line).
+command! -range JSONFormat <line1>,<line2>!python -m json.tool
+
 " Close buffer while keeping the split open.
 " @param bang Is a 0 or 1 indicating if the command ended with a bang (!).
 "     i.e. close the buffer even if it is modified.
