@@ -523,3 +523,18 @@ exe "call FeLocalVDebugPathMaps('.vdebug_path_maps')"
 " Add normal command 'S' to intelligently split a line.
 " See https://github.com/drzel/vim-split-line
 nnoremap S :keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>
+
+function! UnAddLine()
+	" Store current position
+	let position = winsaveview()
+	" Jump to second line
+	execute ":2"
+	" Move to the last number.
+	execute ":normal 2t@h"
+	" Decrement the value under the cursor.
+	execute ':normal ' . "\<C-X>"
+	" Restore position
+	call winrestview(position)
+	" Delete current line
+	execute ":normal dd"
+endfunction
