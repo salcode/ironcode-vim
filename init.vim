@@ -538,3 +538,18 @@ function! UnAddLine()
 	" Delete current line
 	execute ":normal dd"
 endfunction
+
+function! UnDeleteLine()
+	" Store current position
+	let position = winsaveview()
+	" Jump to second line
+	execute ":2"
+	" Move to the last number.
+	execute ":normal 2t@h"
+	" Increment the value under the cursor.
+	execute ':normal ' . "\<C-A>"
+	" Restore position
+	call winrestview(position)
+	" Remove the leading - sign
+	execute "normal 0r "
+endfunction
