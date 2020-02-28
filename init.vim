@@ -569,6 +569,16 @@ function! DeleteLine()
 	execute "normal 0r-"
 endfunction
 
+function! GitHunkToggle()
+	if IsFirstCharacter('-')
+		call UnDeleteLine()
+	elseif IsFirstCharacter('+')
+		call UnAddLine()
+	elseif IsFirstCharacter(' ')
+		call DeleteLine()
+	endif
+endfunction
+
 function! IsFirstCharacter(characterToCompare) abort
 	let l:rowContent           = getline('.')
 	let l:colPos               = col('.')
