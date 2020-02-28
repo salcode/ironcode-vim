@@ -579,6 +579,11 @@ function! GitHunkToggle()
 	endif
 endfunction
 
+augroup fe_git_commit_hunk
+	autocmd!
+	autocmd FileType diff nnoremap <buffer> <leader><leader> :call GitHunkToggle()<CR>
+augroup END
+
 function! IsFirstCharacter(characterToCompare) abort
 	let l:rowContent           = getline('.')
 	let l:colPos               = col('.')
