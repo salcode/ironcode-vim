@@ -553,3 +553,18 @@ function! UnDeleteLine()
 	" Remove the leading - sign
 	execute "normal 0r "
 endfunction
+
+function! DeleteLine()
+	" Store current position
+	let position = winsaveview()
+	" Jump to second line
+	execute ":2"
+	" Move to the last number.
+	execute ":normal 2t@h"
+	" Decrement the value under the cursor.
+	execute ':normal ' . "\<C-X>"
+	" Restore position
+	call winrestview(position)
+	" Add a leading - sign
+	execute "normal 0r-"
+endfunction
