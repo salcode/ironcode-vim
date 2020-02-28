@@ -568,3 +568,13 @@ function! DeleteLine()
 	" Add a leading - sign
 	execute "normal 0r-"
 endfunction
+
+function! IsFirstCharacter(characterToCompare) abort
+	let l:rowContent           = getline('.')
+	let l:colPos               = col('.')
+	let l:firstCharacter = strpart( l:rowContent, 0, 1)
+	" echo l:firstCharacter
+	if l:firstCharacter ==# a:characterToCompare
+		return 1
+	endif
+endfunction
