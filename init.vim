@@ -124,6 +124,12 @@ set list
 " show absolute line number on current line, relative line number on all others
 set number relativenumber
 
+augroup fe_absolute_line_number_toggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " display tabs as taking up 4 spaces
 set tabstop=4
 
