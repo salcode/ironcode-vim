@@ -149,6 +149,11 @@ set ignorecase
 " override ignorecase if the search pattern contains upper case characters
 set smartcase
 
+" Preview effects of command incrementally (e.g. :substitute). Neovim only.
+if has('nvim')
+	set inccommand=nosplit
+endif
+
 " add `-` as part of the word in all situations
 set iskeyword+=-
 
