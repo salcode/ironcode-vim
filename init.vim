@@ -513,3 +513,7 @@ endf
 " Attempt to load a project specific vdebug path map file from the
 " current directory.
 exe "call FeLocalVDebugPathMaps('.vdebug_path_maps')"
+
+" Add normal command 'S' to intelligently split a line.
+" See https://github.com/drzel/vim-split-line
+nnoremap S :keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>
