@@ -524,6 +524,9 @@ exe "call FeLocalVDebugPathMaps('.vdebug_path_maps')"
 " See https://github.com/drzel/vim-split-line
 nnoremap S :keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>
 
+" --------------------------------------
+" --  Begin Git staging Hunks Helpers --
+" --------------------------------------
 function! UnAddLine()
 	" Store current position
 	let position = winsaveview()
@@ -593,3 +596,6 @@ function! IsFirstCharacter(characterToCompare) abort
 		return 1
 	endif
 endfunction
+" --------------------------------------
+" --- End Git staging Hunks Helpers ----
+" --------------------------------------
