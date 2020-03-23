@@ -143,9 +143,6 @@ set noexpandtab
 " would insert a combination of the tab character and spaces
 set softtabstop=4
 
-" set font and font size for GUI
-set guifont=Monaco:h13
-
 " highlight all search matches after search is complete
 set hlsearch
 
@@ -349,6 +346,9 @@ if has("gui_macvim")
 		autocmd!
 		autocmd GUIEnter * set vb t_vb=
 	augroup END
+
+	" set font and font size for GUI
+	set guifont=Monaco:h13
 endif
 
 " In visual mode, when * (or ?) is pressed search for selected text.
