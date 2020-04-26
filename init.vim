@@ -118,6 +118,9 @@ set wildmenu
 " Keep cursor at least two lines away from top or bottom of screen.
 set scrolloff=2
 
+" Display as much as possible of the last line in a window.
+set display+=lastline
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
