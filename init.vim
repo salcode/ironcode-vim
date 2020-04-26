@@ -101,6 +101,10 @@ set autoindent
 " (see :help 'backspace')
 set backspace=indent,eol,start
 
+" Remove included files from areas to scan for keyword completion
+" (see :help 'complete')
+set complete-=i
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
