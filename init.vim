@@ -97,6 +97,10 @@ filetype indent on
 " Copy indent from current line when starting a new line
 set autoindent
 
+" Allow backspacing over: autoindent, line breaks, and start of line
+" (see :help 'backspace')
+set backspace=indent,eol,start
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
