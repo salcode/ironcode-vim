@@ -300,10 +300,13 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " See :help quote0
 nnoremap <leader>0 "0p
 
-" Map X as delete to the black hole registry. Issue #112.
-nnoremap X "_d
-nnoremap XX "_dd
-vnoremap X "_d
+" Black hole register mappings. See :help quote_
+" Leader normal mapping to start a delete to black hole register command.
+nnoremap <leader>_ "_d
+" Leader normal mapping to delete the current line to the black hole register.
+nnoremap <leader>__ "_dd
+" Visual mode mapping to delete current selection to the black hole register.
+vnoremap <leader>_ "_d
 
 " Center next/prev match on screen when using n/N. Issue #110.
 noremap n nzz
