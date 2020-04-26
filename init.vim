@@ -151,7 +151,7 @@ set ignorecase
 
 " override ignorecase if the search pattern contains upper case characters
 set smartcase
-
+set incsearch
 " Preview effects of command incrementally (e.g. :substitute). Neovim only.
 if has('nvim')
 	set inccommand=nosplit
