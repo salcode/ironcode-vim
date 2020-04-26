@@ -71,20 +71,41 @@ Plug 'vim-vdebug/vdebug'
 call plug#end()
 " }}} Plugins
 
+" {{{ Colorscheme
 if has('termguicolors')
+	" Enable 24-bit RGB color in text UI.
 	set termguicolors
 endif
 
-syntax enable
-
-" Perform syntax highlighting the first 256 columns only.
-set synmaxcol=256
+set background=dark
+colorscheme badwolf
 
 if has('gui_running')
-	" Configure Solarized Color Scheme
+	" Set Light Mode Solarized in GUI.
 	set background=light
 	colorscheme solarized
 endif
+
+" Correct color display in Vim in Tmux
+" See https://salferrarello.com/vim-tmux-iterm-broken-colors/
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" }}} Colorscheme
+
+" {{{ Syntax highlighting.
+" Switch on syntax highlighting.
+syntax enable
+
+" Perform syntax highlighting for the first 256 columns only.
+set synmaxcol=256
+" }}} Syntax highlighting.
+
+" {{{ Invisible characters.
+" Show invisible characters.
+set list
+" Set list of invisible characters to display.
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+" }}} Invisible characters.
 
 " Enable filetype detection
 filetype on
@@ -122,16 +143,6 @@ set display+=lastline
 
 set encoding=utf-8
 
-" Set list of (usually) invisible characters to display.
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-
-" Correct color display in Vim in Tmux
-" See https://salferrarello.com/vim-tmux-iterm-broken-colors/
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-colorscheme badwolf
-
 " Configure File Explorer to include line numbers
 let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
@@ -157,9 +168,6 @@ augroup fe_folding_vim
 	autocmd!
 	autocmd FileType vim setlocal foldmethod=marker
 augroup END
-
-" show invisible characters
-set list
 
 " show absolute line number on current line, relative line number on all others
 set number relativenumber
