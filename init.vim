@@ -296,8 +296,9 @@ set clipboard=unnamed
 " Add shortcut <leader>u for UndotreeToggle plugin
 nnoremap <leader>u :UndotreeToggle<CR>
 
-" easy access to register containing last yank (ignoring delete and replace)
-nnoremap <leader>p "0p
+" Map <leader>0 to pasting the last yank (ignores deletes and replaces)
+" See :help quote0
+nnoremap <leader>0 "0p
 
 " Map X as delete to the black hole registry. Issue #112.
 nnoremap X "_d
