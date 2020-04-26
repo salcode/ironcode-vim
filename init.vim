@@ -151,6 +151,9 @@ set tabstop=4
 " set << and >> to move 4 columns
 set shiftwidth=4
 
+" use 'shiftwidth' when inserting a <Tab> in front of a line
+set smarttab
+
 " use the tab character (not spaces)
 set noexpandtab
 
