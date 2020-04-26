@@ -3,9 +3,6 @@ call plug#begin()
 " Reverse the order of commits in a git interactive rebase
 Plug 'salcode/vim-interactive-rebase-reverse'
 
-" Sensible Vim Defaults
-Plug 'tpope/vim-sensible'
-
 " Solarized Colorscheme
 Plug 'altercation/vim-colors-solarized'
 
@@ -90,6 +87,45 @@ if has('gui_running')
 	colorscheme solarized
 endif
 
+" Enable filetype detection
+filetype on
+" Load filetype plugins
+filetype plugin on
+" Load indent file based on filetype
+filetype indent on
+
+" Copy indent from current line when starting a new line
+set autoindent
+
+" Allow backspacing over: autoindent, line breaks, and start of line
+" (see :help 'backspace')
+set backspace=indent,eol,start
+
+" Remove included files from areas to scan for keyword completion
+" (see :help 'complete')
+set complete-=i
+
+" Do not interpret numbers that start with a zero as octal when using CTRL-A,
+" CTRL-X for increment/decrement.
+set nrformats-=octal
+
+" Always display status bar.
+set laststatus=2
+
+" When <Tab> is pressed in command-line mode, display possible matches.
+set wildmenu
+
+" Keep cursor at least two lines away from top or bottom of screen.
+set scrolloff=2
+
+" Display as much as possible of the last line in a window.
+set display+=lastline
+
+set encoding=utf-8
+
+" Set list of (usually) invisible characters to display.
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -135,6 +171,9 @@ set tabstop=4
 
 " set << and >> to move 4 columns
 set shiftwidth=4
+
+" use 'shiftwidth' when inserting a <Tab> in front of a line
+set smarttab
 
 " use the tab character (not spaces)
 set noexpandtab
