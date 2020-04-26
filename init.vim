@@ -153,6 +153,11 @@ augroup fe_folding_php
 	autocmd FileType php setlocal foldmarker={,} foldmethod=marker foldlevelstart=1
 augroup END
 
+augroup fe_folding_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
 " show invisible characters
 set list
 
