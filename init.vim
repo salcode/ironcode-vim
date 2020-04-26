@@ -87,6 +87,13 @@ if has('gui_running')
 	colorscheme solarized
 endif
 
+" Enable filetype detection
+filetype on
+" Load filetype plugins
+filetype plugin on
+" Load indent file based on filetype
+filetype indent on
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
