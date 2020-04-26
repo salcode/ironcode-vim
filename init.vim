@@ -195,6 +195,8 @@ set incsearch
 if has('nvim')
 	set inccommand=nosplit
 endif
+" Clear the search results with <leader>/
+nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " add `-` as part of the word in all situations
 set iskeyword+=-
