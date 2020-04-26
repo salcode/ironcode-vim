@@ -9,9 +9,6 @@ Plug 'altercation/vim-colors-solarized'
 " Badwolf Colorscheme
 Plug 'sjl/badwolf'
 
-" Vim-Two-Firewatch Colorscheme
-Plug 'rakr/vim-two-firewatch'
-
 " File explorer (enhanced netrw), trigger from Normal mode with `-`
 Plug 'tpope/vim-vinegar'
 
