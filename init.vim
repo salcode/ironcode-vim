@@ -115,6 +115,9 @@ set laststatus=2
 " When <Tab> is pressed in command-line mode, display possible matches.
 set wildmenu
 
+" Keep cursor at least two lines away from top or bottom of screen.
+set scrolloff=2
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
