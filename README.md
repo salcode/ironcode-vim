@@ -14,7 +14,7 @@ bash <(curl "https://raw.githubusercontent.com/salcode/ironcode-vim/master/insta
 
 Updating Plugins
 ----------------
-From within Vim type `:BundleInstall!`
+From within Vim type `:PlugInstall`
 
 Plugins and Detailed Settings
 -----------------------------
