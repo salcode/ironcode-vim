@@ -105,6 +105,10 @@ set backspace=indent,eol,start
 " (see :help 'complete')
 set complete-=i
 
+" Do not interpret numbers that start with a zero as octal when using CTRL-A,
+" CTRL-X for increment/decrement.
+set nrformats-=octal
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
