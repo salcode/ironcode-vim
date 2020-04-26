@@ -112,6 +112,9 @@ set nrformats-=octal
 " Always display status bar.
 set laststatus=2
 
+" When <Tab> is pressed in command-line mode, display possible matches.
+set wildmenu
+
 " Correct color display in Vim in Tmux
 " See https://salferrarello.com/vim-tmux-iterm-broken-colors/
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
