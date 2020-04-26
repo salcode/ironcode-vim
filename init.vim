@@ -1,3 +1,4 @@
+" {{{ Plugins
 call plug#begin()
 
 " Reverse the order of commits in a git interactive rebase
@@ -68,6 +69,7 @@ Plug 'salcode/vim-wordpress-dict'
 Plug 'vim-vdebug/vdebug'
 
 call plug#end()
+" }}} Plugins
 
 if has('termguicolors')
 	set termguicolors
