@@ -107,6 +107,20 @@ set list
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 " }}} Invisible characters.
 
+" {{{ Line Numbers
+" Show absolute line number on current line,
+" relative line numbers on all other lines.
+set number relativenumber
+
+" Disable relative line numbers in insert mode.
+augroup fe_absolute_line_number_toggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+" }}} Line Numbers
+
 " Enable filetype detection
 filetype on
 " Load filetype plugins
@@ -167,15 +181,6 @@ augroup END
 augroup fe_folding_vim
 	autocmd!
 	autocmd FileType vim setlocal foldmethod=marker
-augroup END
-
-" show absolute line number on current line, relative line number on all others
-set number relativenumber
-
-augroup fe_absolute_line_number_toggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
 " display tabs as taking up 4 spaces
