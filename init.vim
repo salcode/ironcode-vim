@@ -121,6 +121,30 @@ augroup END
 
 " }}} Line Numbers
 
+" {{{ Search
+
+" Ignore case when searching.
+set ignorecase
+
+" Override ignorecase if the search pattern contains upper case characters.
+set smartcase
+
+" Highlight all search matches.
+set hlsearch
+
+" Highlight search matches as the search is being typed.
+set incsearch
+
+" Preview effects of command incrementally (e.g. :substitute). Neovim only.
+if has('nvim')
+	set inccommand=nosplit
+endif
+
+" Clear the search results with <leader>/
+nnoremap <silent> <leader>/ :nohlsearch<CR>
+
+" }}} Search
+
 " Enable filetype detection
 filetype on
 " Load filetype plugins
@@ -198,22 +222,6 @@ set noexpandtab
 " if this number were less than tabstop, pressing tab in insert mode
 " would insert a combination of the tab character and spaces
 set softtabstop=4
-
-" highlight all search matches after search is complete
-set hlsearch
-
-" ignore case when searching
-set ignorecase
-
-" override ignorecase if the search pattern contains upper case characters
-set smartcase
-set incsearch
-" Preview effects of command incrementally (e.g. :substitute). Neovim only.
-if has('nvim')
-	set inccommand=nosplit
-endif
-" Clear the search results with <leader>/
-nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " add `-` as part of the word in all situations
 set iskeyword+=-
