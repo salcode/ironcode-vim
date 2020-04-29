@@ -325,6 +325,9 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " See :help quote0
 nnoremap <leader>0 "0p
 
+" <leader>n switch to normal mode
+nnoremap <leader>n <C-\><C-n>
+
 " Black hole register mappings. See :help quote_
 " Leader normal mapping to start a delete to black hole register command.
 nnoremap <leader>_ "_d
