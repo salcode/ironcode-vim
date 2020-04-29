@@ -71,6 +71,9 @@ Plug 'vim-vdebug/vdebug'
 call plug#end()
 " }}} Plugins
 
+" set leader to space key
+let mapleader = "\<Space>"
+
 " {{{ Colorscheme
 if has('termguicolors')
 	" Enable 24-bit RGB color in text UI.
@@ -253,9 +256,6 @@ if has('nvim')
 		autocmd FocusGained * silent! checktime
 	augroup END
 endif
-
-" set leader to space key
-let mapleader = "\<Space>"
 
 " ALE Linter / Code Sniffing / Syntax Checker
 let g:ale_linters = {
