@@ -101,6 +101,10 @@ syntax enable
 
 " Perform syntax highlighting for the first 256 columns only.
 set synmaxcol=256
+
+" Highlight merge conflict markers
+match Todo '\v^(\<|\=|\>){7}([^=].+)?$'
+
 " }}} Syntax highlighting.
 
 " {{{ Invisible characters.
