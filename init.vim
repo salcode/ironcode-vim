@@ -152,6 +152,14 @@ nnoremap <silent> <leader>/ :nohlsearch<CR>
 
 " }}} Search
 
+" {{{ Jump To
+
+" Jump to next/previous merge conflict marker with ]c, [c
+nnoremap <silent> ]c /\v^(\<\|\=\|\>){7}([^=].+)?$<CR>
+nnoremap <silent> [c ?\v^(\<\|\=\|\>){7}([^=].+)\?$<CR>
+
+" }}} Jump To
+
 " Enable filetype detection
 filetype on
 " Load filetype plugins
