@@ -74,6 +74,9 @@ call plug#end()
 " set leader to space key
 let mapleader = "\<Space>"
 
+" Use visual bell instead of beeping.
+set visualbell
+
 " {{{ Colorscheme
 if has('termguicolors')
 	" Enable 24-bit RGB color in text UI.
