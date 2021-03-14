@@ -196,9 +196,10 @@ let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 	" ignore the path of the buffer (show only filename)
 	let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Configure Comment toggling style to "//" instead of "/*" in PHP
-augroup fe_commentary_php_commentstring
+" Configure Comment toggling style
+augroup fe_commentary_commentstring
 	autocmd!
+	" Use "//" instead of "/*" in PHP
 	autocmd FileType php setlocal commentstring=//\ %s
 augroup END
 
