@@ -66,7 +66,7 @@ Plug 'salcode/vim-error-log-shortcut'
 Plug 'salcode/vim-wordpress-dict'
 
 " Load vdebug for working with xdebug
-Plug 'vim-vdebug/vdebug'
+" Plug 'vim-vdebug/vdebug'
 
 call plug#end()
 " }}} Plugins
