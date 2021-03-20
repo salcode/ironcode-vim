@@ -68,6 +68,9 @@ Plug 'salcode/vim-wordpress-dict'
 " Load vdebug for working with xdebug
 " Plug 'vim-vdebug/vdebug'
 
+" Add <space><space> toggle command to file-type diff.
+Plug 'salcode/vim-git-stage-hunk'
+
 call plug#end()
 " }}} Plugins
 
@@ -602,79 +605,3 @@ exe "call FeLocalVDebugPathMaps('.vdebug_path_maps')"
 " Add normal command 'S' to intelligently split a line.
 " See https://github.com/drzel/vim-split-line
 nnoremap S :keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>
-
-" --------------------------------------
-" --  Begin Git staging Hunks Helpers --
-" --------------------------------------
-function! UnAddLine()
-	" Store current position
-	let position = winsaveview()
-	" Jump to second line
-	execute ":2"
-	" Move to the last number.
-	execute ":normal 2t@h"
-	" Decrement the value under the cursor.
-	execute ':normal ' . "\<C-X>"
-	" Restore position
-	call winrestview(position)
-	" Delete current line
-	execute ":normal dd"
-endfunction
-
-function! UnDeleteLine()
-	" Store current position
-	let position = winsaveview()
-	" Jump to second line
-	execute ":2"
-	" Move to the last number.
-	execute ":normal 2t@h"
-	" Increment the value under the cursor.
-	execute ':normal ' . "\<C-A>"
-	" Restore position
-	call winrestview(position)
-	" Remove the leading - sign
-	execute "normal 0r "
-endfunction
-
-function! DeleteLine()
-	" Store current position
-	let position = winsaveview()
-	" Jump to second line
-	execute ":2"
-	" Move to the last number.
-	execute ":normal 2t@h"
-	" Decrement the value under the cursor.
-	execute ':normal ' . "\<C-X>"
-	" Restore position
-	call winrestview(position)
-	" Add a leading - sign
-	execute "normal 0r-"
-endfunction
-
-function! GitHunkToggle()
-	if IsFirstCharacter('-')
-		call UnDeleteLine()
-	elseif IsFirstCharacter('+')
-		call UnAddLine()
-	elseif IsFirstCharacter(' ')
-		call DeleteLine()
-	endif
-endfunction
-
-augroup fe_git_commit_hunk
-	autocmd!
-	autocmd FileType diff nnoremap <buffer> <leader><leader> :call GitHunkToggle()<CR>
-augroup END
-
-function! IsFirstCharacter(characterToCompare) abort
-	let l:rowContent           = getline('.')
-	let l:colPos               = col('.')
-	let l:firstCharacter = strpart( l:rowContent, 0, 1)
-	" echo l:firstCharacter
-	if l:firstCharacter ==# a:characterToCompare
-		return 1
-	endif
-endfunction
-" --------------------------------------
-" --- End Git staging Hunks Helpers ----
-" --------------------------------------
