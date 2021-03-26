@@ -353,6 +353,10 @@ vnoremap <leader>_ "_d
 noremap n nzz
 noremap N Nzz
 
+" Jump to next/previous merge conflict marker
+nnoremap <silent> ]c /\v^(\<\|\=\|\>){7}([^=].+)?$<CR>
+nnoremap <silent> [c ?\v^(\<\|\=\|\>){7}([^=].+)\?$<CR>
+
 " Select last paste with gb. Issue #109.
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
